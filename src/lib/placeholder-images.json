@@ -23,6 +23,60 @@
       "description": "Gift box with roses and gourmet chocolates, named Detalle Romántico",
       "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuD12Ha8VenaY4SyH31Mmxh2QHzmt7wxLEFbKJIF7UivHc_lcKncp9XMP52rnCKATiZwVJhevqbh9FjxhXgkVbI0FxTykZ6QEEP6SZWzigEY-o0iAm1Pc5316oDe7xeSm-7kyLF8rtVa-yuca3h7WaoUy3-FgXXCoL8cn66bJah3-oQ5UJPpmfTau40IUkaDtPKhDw5NIn4DU0BNsBUAykGsJfXFzezBWbPwgqCWgehQN7SKDzjVuWzgXYJ8COq7gE_y9uJSaQUdFQ",
       "imageHint": "roses chocolates"
+    },
+    {
+      "id": "product-pureza-blanca",
+      "description": "Minimalist elegance with selected white lilies, named Pureza Blanca",
+      "imageUrl": "https://images.unsplash.com/photo-1580595999172-787970a962d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3aGl0ZSUyMGxpbGllc3xlbnwwfHx8fDE3NzAwNDg0NjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "white lilies"
+    },
+    {
+      "id": "product-pradera-silvestre",
+      "description": "An overflowing arrangement with seasonal flowers, named Pradera Silvestre",
+      "imageUrl": "https://images.unsplash.com/photo-1553290133-b15e458c2067?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3aWxkJTIwZmxvd2Vyc3xlbnwwfHx8fDE3NzAwNDg0NjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wild flowers"
+    },
+    {
+      "id": "product-caja-de-encanto",
+      "description": "Premium luxury box with red roses and gold details, named Caja de Encanto",
+      "imageUrl": "https://images.unsplash.com/photo-1608970800488-9d0f21f68132?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxyb3NlJTIwYm94fGVufDB8fHx8MTc3MDA0ODQ2NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rose box"
+    },
+    {
+      "id": "product-misterio-purpura",
+      "description": "Orchids and violets that convey nobility, named Misterio Púrpura",
+      "imageUrl": "https://images.unsplash.com/photo-1743636212404-77a0522b5a64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwdXJwbGUlMjBvcmNoaWRzfGVufDB8fHx8MTc3MDA0ODQ2NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "purple orchids"
+    },
+    {
+      "id": "product-amanecer-dorado",
+      "description": "Radiant sunflowers that combine any space, named Amanecer Dorado",
+      "imageUrl": "https://images.unsplash.com/photo-1455659817273-f96807779a8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzdW5mbG93ZXJzfGVufDB8fHx8MTc3MDA0ODQ2NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sunflowers"
+    },
+    {
+      "id": "product-sonrisa-de-sol",
+      "description": "Bright yellow gerberas",
+      "imageUrl": "https://images.unsplash.com/photo-1686424893213-a3afddc5c61b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx5ZWxsb3clMjBnZXJiZXJhc3xlbnwwfHx8fDE3NzAwNDg0NjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "yellow gerberas"
+    },
+    {
+      "id": "product-corazon-de-rubi",
+      "description": "Deep red carnations",
+      "imageUrl": "https://images.unsplash.com/photo-1710158605680-2302e061fc92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyZWQlMjBjYXJuYXRpb25zfGVufDB8fHx8MTc3MDA0ODQ2NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "red carnations"
+    },
+    {
+      "id": "product-beso-de-angel",
+      "description": "Soft pink and white roses",
+      "imageUrl": "https://images.unsplash.com/photo-1599180439865-2735aa19840f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwaW5rJTIwcm9zZXN8ZW58MHx8fHwxNzcwMDQ4NDY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pink roses"
+    },
+    {
+      "id": "product-abrazo-calido",
+      "description": "Orange and yellow flowers",
+      "imageUrl": "https://images.unsplash.com/photo-1590872000386-4348c6393115?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxvcmFuZ2UlMjBmbG93ZXJzfGVufDB8fHx8MTc3MDAzNzgyNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "orange flowers"
     }
   ]
 }

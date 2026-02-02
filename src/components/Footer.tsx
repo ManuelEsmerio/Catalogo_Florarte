@@ -25,7 +25,7 @@ export function Footer() {
             </li>
             <li className="flex items-center gap-3">
               <MaterialIcon icon="mail" className="text-primary" />{' '}
-              hola@florarte.com
+              manuel_florarte@hotmail.com
             </li>
             <li className="flex items-center gap-3">
               <MaterialIcon icon="location_on" className="text-primary" /> Ciudad

@@ -18,12 +18,12 @@ export function ProductCard({ product }: ProductCardProps) {
           alt={imageAlt}
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-110"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
         />
         {badge && (
           <div className="absolute top-4 left-4">
             <span
-              className={`text-xs font-bold px-3 py-1 rounded-full shadow-lg ${badgeColor} ${badgeTextColor}`}
+              className={`text-xs font-bold uppercase px-3 py-1 rounded-full shadow-lg ${badgeColor} ${badgeTextColor}`}
             >
               {badge}
             </span>
