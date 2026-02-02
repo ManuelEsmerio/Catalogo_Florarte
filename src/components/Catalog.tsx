@@ -2,7 +2,9 @@
 
 import { useMemo, useState } from 'react';
 import { products } from '@/lib/products';
+import type { Product } from '@/lib/products';
 import { ProductCard } from './ProductCard';
+import { ProductDetailModal } from './ProductDetailModal';
 import {
   Select,
   SelectContent,
@@ -17,6 +19,7 @@ const PRODUCTS_PER_PAGE = 8;
 export function Catalog() {
   const [visibleCount, setVisibleCount] = useState(PRODUCTS_PER_PAGE);
   const [sortBy, setSortBy] = useState('recent');
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   const sortedProducts = useMemo(() => {
     return [...products].sort((a, b) => {
@@ -40,6 +43,14 @@ export function Catalog() {
 
   const loadMoreProducts = () => {
     setVisibleCount((prevCount) => prevCount + PRODUCTS_PER_PAGE);
+  };
+
+  const handleOpenModal = (product: Product) => {
+    setSelectedProduct(product);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedProduct(null);
   };
 
   return (
@@ -76,7 +87,11 @@ export function Catalog() {
       <section className="px-4 md:px-20 lg:px-40 py-10">
         <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {visibleProducts.map((product) => (
-            <ProductCard key={product.code} product={product} />
+            <ProductCard
+              key={product.code}
+              product={product}
+              onOpenModal={() => handleOpenModal(product)}
+            />
           ))}
         </div>
         {visibleCount < products.length && (
@@ -95,6 +110,16 @@ export function Catalog() {
           </div>
         )}
       </section>
+
+      <ProductDetailModal
+        isOpen={!!selectedProduct}
+        onOpenChange={(isOpen) => {
+          if (!isOpen) {
+            handleCloseModal();
+          }
+        }}
+        product={selectedProduct}
+      />
     </>
   );
 }

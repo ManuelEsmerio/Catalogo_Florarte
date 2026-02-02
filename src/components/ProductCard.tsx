@@ -1,17 +1,21 @@
 import Image from 'next/image';
 import type { Product } from '@/lib/products';
-import { generateProductWhatsAppLink } from '@/lib/whatsapp';
-import { MaterialIcon } from './MaterialIcon';
+import { Button } from './ui/button';
 
 type ProductCardProps = {
   product: Product;
+  onOpenModal: () => void;
 };
 
-export function ProductCard({ product }: ProductCardProps) {
-  const { name, price, description, image, imageAlt, badge, badgeColor, badgeTextColor, code } = product;
+export function ProductCard({ product, onOpenModal }: ProductCardProps) {
+  const { name, price, image, imageAlt, badge, badgeColor, badgeTextColor } =
+    product;
 
   return (
-    <div className="group flex flex-col bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-transparent hover:border-primary/20">
+    <div
+      className="group flex flex-col bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-card hover:border-primary/20 cursor-pointer"
+      onClick={onOpenModal}
+    >
       <div className="relative aspect-[4/5] overflow-hidden">
         <Image
           src={image}
@@ -21,7 +25,7 @@ export function ProductCard({ product }: ProductCardProps) {
           sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
         />
         {badge && (
-          <div className="absolute top-4 left-4">
+          <div className="absolute top-4 left-4 z-10">
             <span
               className={`text-xs font-bold uppercase px-3 py-1 rounded-full shadow-lg ${badgeColor} ${badgeTextColor}`}
             >
@@ -30,27 +34,22 @@ export function ProductCard({ product }: ProductCardProps) {
           </div>
         )}
       </div>
-      <div className="p-6 space-y-4 flex flex-col flex-1">
-        <div className="space-y-2 flex-1">
-          <div className="flex justify-between items-start gap-4">
-            <h3 className="text-xl font-bold text-foreground">{name}</h3>
-            <p className="text-primary font-bold text-xl whitespace-nowrap">
-              ${price} MXN
-            </p>
-          </div>
-          <p className="text-muted-foreground text-sm leading-relaxed italic">
-            &quot;{description}&quot;
+      <div className="p-4 sm:p-5 flex flex-col flex-1">
+        <div className="flex justify-between items-start gap-4 flex-1">
+          <h3 className="text-lg font-bold text-foreground leading-tight">
+            {name}
+          </h3>
+          <p className="text-primary font-bold text-lg whitespace-nowrap">
+            ${price}
           </p>
         </div>
-        <a
-          className="flex self-center items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full py-3 px-5 font-bold text-sm whitespace-nowrap transition-all shadow-md hover:shadow-lg active:scale-95 mt-4"
-          href={generateProductWhatsAppLink(name, price, code)}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Button
+          variant="outline"
+          className="w-full mt-4 font-bold border-primary/20 text-primary hover:bg-primary/5 hover:text-primary"
+          tabIndex={-1} // The whole card is clickable, so this button is just for visual cues
         >
-          <MaterialIcon icon="chat" className="text-lg" />
-          Pedir por WhatsApp
-        </a>
+          Ver detalles
+        </Button>
       </div>
     </div>
   );
