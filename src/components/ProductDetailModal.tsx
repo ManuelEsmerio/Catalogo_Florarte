@@ -70,12 +70,17 @@ export function ProductDetailModal({
                 &quot;{description}&quot;
               </DialogDescription>
             </div>
-            <div className="flex flex-col gap-4">
-              <p className="text-3xl font-bold text-primary text-right">
-                ${price} MXN
-              </p>
+            <div className="flex flex-col gap-2">
+              <div className="text-right">
+                <p className="text-3xl font-bold text-primary">
+                  ${price} MXN
+                </p>
+                <p className="text-xs text-muted-foreground -mt-1">
+                  * Costo de envío no incluido.
+                </p>
+              </div>
               <a
-                className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full py-3.5 px-5 font-bold text-base whitespace-nowrap transition-all shadow-md hover:shadow-lg active:scale-95"
+                className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full py-3.5 px-5 font-bold text-base whitespace-nowrap transition-all shadow-md hover:shadow-lg active:scale-95 mt-2"
                 href={generateProductWhatsAppLink(name, price, code)}
                 target="_blank"
                 rel="noopener noreferrer"

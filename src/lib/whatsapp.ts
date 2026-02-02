@@ -6,7 +6,17 @@ export const generateProductWhatsAppLink = (
   productPrice: number,
   productCode: string
 ) => {
-  const message = `Hola 👋, estoy interesado en el siguiente arreglo para el 14 de febrero:\n\n*Producto:* ${productName}\n*Código:* ${productCode}\n*Precio:* $${productPrice} MXN\n\n¿Podrían confirmarme la disponibilidad y cómo proceder con el pedido?\n\n¡Gracias!`;
+  const message = `Hola 👋✨
+
+Me interesa el siguiente arreglo para el 14 de febrero:
+
+🌹 Producto: ${productName}
+🏷️ Código: ${productCode}
+💲 Precio: $${productPrice} MXN
+
+¿Me podrían confirmar disponibilidad y los pasos para realizar el pedido?
+
+¡Muchas gracias! 💐`;
   return `${BASE_URL}?text=${encodeURIComponent(message)}`;
 };
 
