@@ -9,6 +9,7 @@ export interface Product {
   badge?: string;
   badgeColor?: string;
   badgeTextColor?: string;
+  code: string;
 }
 
 const findImage = (id: string) =>
@@ -25,6 +26,7 @@ export const products: Product[] = [
     badge: 'El favorito de todos',
     badgeColor: 'bg-primary',
     badgeTextColor: 'text-primary-foreground',
+    code: 'FE01',
   },
   {
     name: 'Rocío de Pasión',
@@ -36,6 +38,7 @@ export const products: Product[] = [
     badge: 'Exclusivo',
     badgeColor: 'bg-amber-500',
     badgeTextColor: 'text-white',
+    code: 'FE02',
   },
   {
     name: 'Detalle Romántico',
@@ -47,5 +50,6 @@ export const products: Product[] = [
     badge: 'El Dúo Perfecto',
     badgeColor: 'bg-zinc-800',
     badgeTextColor: 'text-white',
+    code: 'FE03',
   },
 ];

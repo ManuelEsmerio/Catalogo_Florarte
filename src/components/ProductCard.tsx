@@ -8,7 +8,7 @@ type ProductCardProps = {
 };
 
 export function ProductCard({ product }: ProductCardProps) {
-  const { name, price, description, image, imageAlt, badge, badgeColor, badgeTextColor } = product;
+  const { name, price, description, image, imageAlt, badge, badgeColor, badgeTextColor, code } = product;
 
   return (
     <div className="group flex flex-col bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-transparent hover:border-primary/20">
@@ -44,7 +44,7 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
         <a
           className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full py-4 font-bold transition-all shadow-md hover:shadow-lg active:scale-95 mt-4"
-          href={generateProductWhatsAppLink(name, price)}
+          href={generateProductWhatsAppLink(name, price, code)}
           target="_blank"
           rel="noopener noreferrer"
         >

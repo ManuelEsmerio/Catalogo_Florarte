@@ -3,9 +3,10 @@ const BASE_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 export const generateProductWhatsAppLink = (
   productName: string,
-  productPrice: number
+  productPrice: number,
+  productCode: string
 ) => {
-  const message = `Hola 👋\nQuiero pedir el arreglo:\n🌹 ${productName}\n💲 $${productPrice} MXN\n📅 14 de febrero\n\n¿Me ayudas con disponibilidad y entrega?`;
+  const message = `Hola 👋, estoy interesado en el siguiente arreglo para el 14 de febrero:\n\n*Producto:* ${productName}\n*Código:* ${productCode}\n*Precio:* $${productPrice} MXN\n\n¿Podrían confirmarme la disponibilidad y cómo proceder con el pedido?\n\n¡Gracias!`;
   return `${BASE_URL}?text=${encodeURIComponent(message)}`;
 };
 
