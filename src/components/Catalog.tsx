@@ -60,7 +60,7 @@ export function Catalog() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 px-4 border-l-4 border-primary pl-6">
             <div>
               <span className="text-primary font-bold text-sm uppercase tracking-widest">
-                Colección Inolvidable 2024
+                Colección Inolvidable 2026
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mt-1">
                 Regalos que Roban Suspiros
