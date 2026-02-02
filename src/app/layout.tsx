@@ -5,6 +5,7 @@ import { Toaster } from '@/components/ui/toaster';
 export const metadata: Metadata = {
   title: 'Florería Florarte - San Valentín 💖',
   description: 'Sorprende este 14 de Febrero con los mejores arreglos florales. Entrega en CDMX.',
+  icons: [],
 };
 
 export default function RootLayout({
