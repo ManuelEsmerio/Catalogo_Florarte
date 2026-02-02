@@ -24,8 +24,8 @@ export function Footer() {
               <MaterialIcon icon="call" className="text-primary" /> +52 374 110 9133
             </li>
             <li className="flex items-center gap-3">
-              <MaterialIcon icon="mail" className="text-primary" />{' '}
-              manuel_florarte@hotmail.com
+              <MaterialIcon icon="mail" className="text-primary" />
+              <span className="break-all">manuel_florarte@hotmail.com</span>
             </li>
             <li className="flex items-center gap-3">
               <MaterialIcon icon="location_on" className="text-primary" /> Tequila, Jalisco
