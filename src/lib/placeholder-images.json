@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-valentines",
+      "description": "Beautiful bouquet of red roses and pink lilies for Valentine's Day",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuDlA_Q6j6-ZK1G9DERv05m-4sku5SnWjfvf8yEhw52B2UNp_aBAskEsgM1P1B5GO7ZbW4nGMLnrn4WBQOGSS5cCm6BI6pJAQ-PM2RHp8xSHu0XNo_tuy-sCF7U773sJ4HpuP2FAmISuhofZ_sNQaAmTEP7lb8OpA0sUfqch791wOQOuzrPUdjnxZooxa9IP7xSwmMuq_lx9oogw9jQXaBelrhr5hmr2nk__sjejfUTr9qFj8RG8sUM0ojEyvtsySjeFud7F-NV2Mw",
+      "imageHint": "red roses"
+    },
+    {
+      "id": "product-amor-eterno",
+      "description": "Classic bouquet of 24 premium red roses, named Amor Eterno",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuDylI1NXFapYT4vOXhWwF98ovQ1WD1LAiaZFGBAiHI1hO7GlkUgxL5_MUBOsJWPjX3XEQ4NiuQFJMwdCqO6qUaX7tWfJ_FhvOurZSetQxOsADUukqh9i1VuD7XKYw43RpAlBqpQOfG4bMvMqWAexb_6TP5KqoPyHtWvGBYRTmHyib6gefebCRx0ZDLuXMkBe63GiyT45MdU_j0Y8eJY9T655vyDEODr7PRW8NJ5Ww4SmmHGPe-IwdrKypWUmVkFk9VEJOu6ppv-Vg",
+      "imageHint": "rose bouquet"
+    },
+    {
+      "id": "product-rocio-de-pasion",
+      "description": "Vibrant arrangement of fresh tulips and lilies, named Rocío de Pasión",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCYBMroOcgSWKhJqjDi2h_fOfpjmJmIQjWkeWwB17Z8bsuYIjzq-uIT4vsiMkG3ItcqLlUmK2M2OjShuiRiX9cD6v9EZY5us7nmXgqx-vY_Fpc3SdF_O2ilKVKhG6fzpeCCASBFbcl4NGN4XDw7EZtjqMvl7hwpQ-nSSuDv913w_jBJqkwHf_W8dEbiC9y4MxYP6ybRbV0Q5gINK982aGbqBP2EbZOlrtG-gF8cykQdhYS86dV9eXEb4uxTTnXQdUDX6d4aLnB4CA",
+      "imageHint": "tulips lilies"
+    },
+    {
+      "id": "product-detalle-romantico",
+      "description": "Gift box with roses and gourmet chocolates, named Detalle Romántico",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuD12Ha8VenaY4SyH31Mmxh2QHzmt7wxLEFbKJIF7UivHc_lcKncp9XMP52rnCKATiZwVJhevqbh9FjxhXgkVbI0FxTykZ6QEEP6SZWzigEY-o0iAm1Pc5316oDe7xeSm-7kyLF8rtVa-yuca3h7WaoUy3-FgXXCoL8cn66bJah3-oQ5UJPpmfTau40IUkaDtPKhDw5NIn4DU0BNsBUAykGsJfXFzezBWbPwgqCWgehQN7SKDzjVuWzgXYJ8COq7gE_y9uJSaQUdFQ",
+      "imageHint": "roses chocolates"
+    }
+  ]
 }
