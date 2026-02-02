@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import type { Product } from '@/lib/products';
 import { Button } from './ui/button';
+import { generateProductWhatsAppLink } from '@/lib/whatsapp';
+import { MaterialIcon } from './MaterialIcon';
 
 type ProductCardProps = {
   product: Product;
@@ -8,7 +10,7 @@ type ProductCardProps = {
 };
 
 export function ProductCard({ product, onOpenModal }: ProductCardProps) {
-  const { name, price, image, imageAlt, badge, badgeColor, badgeTextColor } =
+  const { name, price, image, imageAlt, badge, badgeColor, badgeTextColor, code } =
     product;
 
   return (
@@ -43,13 +45,25 @@ export function ProductCard({ product, onOpenModal }: ProductCardProps) {
             ${price}
           </p>
         </div>
-        <Button
-          variant="outline"
-          className="w-full mt-4 font-bold border-primary/20 text-primary hover:bg-primary/5 hover:text-primary"
-          tabIndex={-1} // The whole card is clickable, so this button is just for visual cues
-        >
-          Ver detalles
-        </Button>
+        <div className="flex items-center gap-2 mt-4">
+          <Button
+            variant="outline"
+            className="w-full font-bold border-primary/20 text-primary hover:bg-primary/5 hover:text-primary"
+            tabIndex={-1} // The whole card is clickable, so this button is just for visual cues
+          >
+            Ver detalles
+          </Button>
+          <a
+            href={generateProductWhatsAppLink(name, price, code)}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="flex-shrink-0 bg-[#25D366]/20 hover:bg-[#25D366]/30 text-green-700 rounded-full p-3 transition-all shadow-sm hover:shadow-md active:scale-95"
+            aria-label="Pedir por WhatsApp"
+          >
+            <MaterialIcon icon="chat_bubble" className="text-xl" />
+          </a>
+        </div>
       </div>
     </div>
   );
