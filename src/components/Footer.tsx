@@ -13,7 +13,7 @@ export function Footer() {
             <h2 className="text-2xl font-bold">Florería Florarte</h2>
           </div>
           <p className="text-base text-muted-foreground max-w-xs leading-relaxed">
-            Creando momentos inolvidables desde 2010. Tu cómplice en cada
+            Creando momentos inolvidables desde 1995. Tu cómplice en cada
             celebración, entregando amor pétalo a pétalo.
           </p>
         </div>
@@ -28,8 +28,7 @@ export function Footer() {
               manuel_florarte@hotmail.com
             </li>
             <li className="flex items-center gap-3">
-              <MaterialIcon icon="location_on" className="text-primary" /> Ciudad
-              de México
+              <MaterialIcon icon="location_on" className="text-primary" /> Tequila, Jalisco
             </li>
           </ul>
         </div>

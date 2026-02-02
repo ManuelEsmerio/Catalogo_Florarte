@@ -43,12 +43,12 @@ export function ProductCard({ product }: ProductCardProps) {
           </p>
         </div>
         <a
-          className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full py-4 font-bold transition-all shadow-md hover:shadow-lg active:scale-95 mt-4"
+          className="flex self-center items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full py-3 px-5 font-bold text-sm whitespace-nowrap transition-all shadow-md hover:shadow-lg active:scale-95 mt-4"
           href={generateProductWhatsAppLink(name, price, code)}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <MaterialIcon icon="chat" className="text-xl" />
+          <MaterialIcon icon="chat" className="text-lg" />
           Pedir por WhatsApp
         </a>
       </div>
