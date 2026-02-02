@@ -4,6 +4,7 @@ import { Heart, Share2 } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { MaterialIcon } from './MaterialIcon';
+import { Logo } from './Logo';
 
 export function Footer() {
   const [isLiked, setIsLiked] = useState(false);
@@ -67,10 +68,7 @@ export function Footer() {
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="space-y-6 col-span-1 md:col-span-2">
           <div className="flex items-center gap-2">
-            <MaterialIcon
-              icon="local_florist"
-              className="text-primary text-3xl"
-            />
+            <Logo className="size-8 text-primary" />
             <h2 className="text-2xl font-bold">Florería Florarte</h2>
           </div>
           <p className="text-base text-muted-foreground max-w-xs leading-relaxed">

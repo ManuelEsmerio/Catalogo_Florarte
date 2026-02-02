@@ -1,14 +1,13 @@
 import { generateGeneralWhatsAppLink } from '@/lib/whatsapp';
 import { MaterialIcon } from './MaterialIcon';
+import { Logo } from './Logo';
 
 export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-background/80 dark:bg-background/80 backdrop-blur-md border-b border-primary/10 px-4 md:px-20 lg:px-40 py-3">
       <div className="flex items-center justify-between max-w-[1200px] mx-auto">
         <div className="flex items-center gap-2">
-          <div className="text-primary">
-            <MaterialIcon icon="local_florist" className="text-3xl" />
-          </div>
+          <Logo className="size-8 text-primary" />
           <h1 className="text-lg font-bold tracking-tight">Florarte</h1>
         </div>
         <nav className="hidden md:flex items-center gap-8">
