@@ -21,8 +21,7 @@ export function Footer() {
           <h3 className="font-bold text-lg">Contacto Directo</h3>
           <ul className="text-sm space-y-4 text-muted-foreground">
             <li className="flex items-center gap-3">
-              <MaterialIcon icon="call" className="text-primary" /> +52 123 456
-              7890
+              <MaterialIcon icon="call" className="text-primary" /> +52 374 110 9133
             </li>
             <li className="flex items-center gap-3">
               <MaterialIcon icon="mail" className="text-primary" />{' '}
@@ -35,26 +34,18 @@ export function Footer() {
           </ul>
         </div>
         <div className="space-y-4">
-          <h3 className="font-bold text-lg">Horarios Especiales</h3>
+          <h3 className="font-bold text-lg">Horarios</h3>
           <ul className="text-sm space-y-4 text-muted-foreground">
             <li className="flex justify-between">
-              <span>Lun - Vie:</span>{' '}
+              <span>Lun - Sab:</span>{' '}
               <span className="font-medium text-foreground">
-                9:00 - 19:00
+                8:30 AM - 8:30 PM
               </span>
             </li>
             <li className="flex justify-between">
-              <span>Sab - Dom:</span>{' '}
+              <span>Dom:</span>{' '}
               <span className="font-medium text-foreground">
-                10:00 - 16:00
-              </span>
-            </li>
-            <li className="bg-primary/10 p-3 rounded-lg border border-primary/10">
-              <span className="text-primary font-extrabold block">
-                14 de Febrero:
-              </span>
-              <span className="text-primary text-xs font-bold uppercase">
-                Servicio 24 Horas
+                8:30 AM - 2:30 PM
               </span>
             </li>
           </ul>
