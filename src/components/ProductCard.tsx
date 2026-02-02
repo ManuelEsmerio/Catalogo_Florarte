@@ -41,9 +41,12 @@ export function ProductCard({ product, onOpenModal }: ProductCardProps) {
           <h3 className="text-lg font-bold text-foreground leading-tight">
             {name}
           </h3>
-          <p className="text-primary font-bold text-lg whitespace-nowrap">
-            ${price}
-          </p>
+          <div className="text-right flex-shrink-0">
+            <p className="text-primary font-bold text-lg whitespace-nowrap">
+              ${price}
+            </p>
+            <p className="text-xs text-muted-foreground -mt-1">+ ENVÍO</p>
+          </div>
         </div>
         <div className="flex items-center gap-2 mt-4">
           <Button

@@ -72,11 +72,14 @@ export function ProductDetailModal({
             </div>
             <div className="flex flex-col gap-2">
               <div className="text-right">
-                <p className="text-3xl font-bold text-primary">
-                  ${price} MXN
+                <p className="text-3xl font-bold text-primary leading-none">
+                  ${price}
                 </p>
-                <p className="text-xs text-muted-foreground -mt-1">
-                  * Costo de envío no incluido.
+                <p className="text-lg font-bold text-primary leading-tight -mt-1">
+                  MXN
+                </p>
+                <p className="text-xs text-muted-foreground mt-1">
+                  + ENVÍO
                 </p>
               </div>
               <a
