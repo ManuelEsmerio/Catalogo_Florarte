@@ -18,11 +18,11 @@ const findImage = (id: string) =>
 
 export const products: Product[] = [
   {
-    name: 'Amor Eterno',
+    name: 'Ramo 24 Rosas',
     price: 850,
     description:
-      '24 rosas clásicas para decir te amo sin palabras, el símbolo perfecto de una pasión que nunca termina.',
-    image: findImage('product-amor-eterno'),
+      'Ramo con 24 rosas rojas, follaje natural y envoltura en papel coreano con moño decorativo. Ideal para regalo especial. 🌹',
+    image: findImage('ramo-24-rosas'),
     imageAlt: 'Classic bouquet of 24 premium red roses',
     badge: 'FAVORITO DE TODOS',
     badgeColor: 'bg-primary',

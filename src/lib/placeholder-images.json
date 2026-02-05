@@ -7,7 +7,11 @@
       "imageHint": "red roses"
     },
     {
-      "id": "r    },
+      "id": "ramo-24-rosas",
+      "description": "Classic bouquet of 24 premium red roses, named Amor Eterno",
+      "imageUrl": "/images/ramo-24-rosas.png",
+      "imageHint": "ramo 24 rosas bouquet"
+    },
     {
       "id": "product-rocio-de-pasion",
       "description": "Vibrant arrangement of fresh tulips and lilies, named Rocío de Pasión",
