@@ -91,6 +91,9 @@ export function ProductDetailModal({
                 <MaterialIcon icon="chat" className="text-xl" />
                 Pedir por WhatsApp
               </a>
+              <p className="text-xs text-muted-foreground mt-2 text-center">
+                *El diseño y los colores pueden variar según disponibilidad.
+              </p>
             </div>
           </div>
         </div>

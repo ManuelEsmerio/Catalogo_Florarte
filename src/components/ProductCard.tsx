@@ -67,6 +67,9 @@ export function ProductCard({ product, onOpenModal }: ProductCardProps) {
             <MaterialIcon icon="chat_bubble" className="text-xl" />
           </a>
         </div>
+        <p className="text-xs text-muted-foreground mt-2 text-center">
+          *El diseño y los colores pueden variar según disponibilidad.
+        </p>
       </div>
     </div>
   );
