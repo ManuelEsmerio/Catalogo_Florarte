@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { products } from '@/lib/products';
 import type { Product } from '@/lib/products';
 import { ProductCard } from './ProductCard';
@@ -15,14 +15,27 @@ import {
 import { Button } from '@/components/ui/button';
 
 const PRODUCTS_PER_PAGE = 8;
+const categories = ['Todos', 'Flores', 'Paquetes', 'Complementos'];
+type Category = 'Todos' | 'Flores' | 'Paquetes' | 'Complementos';
 
 export function Catalog() {
   const [visibleCount, setVisibleCount] = useState(PRODUCTS_PER_PAGE);
   const [sortBy, setSortBy] = useState('recent');
+  const [selectedCategory, setSelectedCategory] = useState<Category>('Todos');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
+  const filteredProducts = useMemo(() => {
+    if (selectedCategory === 'Todos') {
+      return products;
+    }
+    const categoryLower = selectedCategory.toLowerCase() as 'flores' | 'paquetes' | 'complementos';
+    return products.filter(
+      (product) => product.category === categoryLower
+    );
+  }, [selectedCategory]);
+
   const sortedProducts = useMemo(() => {
-    return [...products].sort((a, b) => {
+    return [...filteredProducts].sort((a, b) => {
       switch (sortBy) {
         case 'price-asc':
           return a.price - b.price;
@@ -34,7 +47,11 @@ export function Catalog() {
           return products.indexOf(a) - products.indexOf(b);
       }
     });
-  }, [sortBy]);
+  }, [sortBy, filteredProducts]);
+
+  useEffect(() => {
+    setVisibleCount(PRODUCTS_PER_PAGE);
+  }, [selectedCategory, sortBy]);
 
   const visibleProducts = useMemo(
     () => sortedProducts.slice(0, visibleCount),
@@ -53,6 +70,8 @@ export function Catalog() {
     setSelectedProduct(null);
   };
 
+  const showingCount = Math.min(visibleCount, sortedProducts.length);
+
   return (
     <>
       <section className="px-4 md:px-20 lg:px-40 pt-12" id="catalogo">
@@ -67,9 +86,6 @@ export function Catalog() {
               </h2>
             </div>
             <div className="flex items-center gap-4">
-              <span className="bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border border-primary/20">
-                Últimas Unidades Disponibles
-              </span>
               <Select onValueChange={setSortBy} defaultValue="recent">
                 <SelectTrigger className="w-[220px] text-sm">
                   <SelectValue placeholder="Ordenar por" />
@@ -81,6 +97,18 @@ export function Catalog() {
                 </SelectContent>
               </Select>
             </div>
+          </div>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-2 px-4">
+            {categories.map((category) => (
+              <Button
+                key={category}
+                variant={selectedCategory === category ? 'default' : 'outline'}
+                className="rounded-full font-bold"
+                onClick={() => setSelectedCategory(category as Category)}
+              >
+                {category}
+              </Button>
+            ))}
           </div>
         </div>
       </section>
@@ -94,7 +122,12 @@ export function Catalog() {
             />
           ))}
         </div>
-        {visibleCount < products.length && (
+        {sortedProducts.length === 0 && (
+          <div className="text-center py-16">
+            <p className="text-muted-foreground text-lg">No se encontraron productos en esta categoría.</p>
+          </div>
+        )}
+        {visibleCount < sortedProducts.length && (
           <div className="text-center mt-12 space-y-2">
             <Button
               variant="outline"
@@ -105,7 +138,7 @@ export function Catalog() {
               Cargar más productos
             </Button>
             <p className="text-xs text-muted-foreground font-medium">
-              Mostrando {visibleCount} de {products.length} arreglos exclusivos
+              Mostrando {showingCount} de {sortedProducts.length} arreglos exclusivos
             </p>
           </div>
         )}

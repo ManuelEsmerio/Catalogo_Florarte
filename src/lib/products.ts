@@ -10,6 +10,7 @@ export interface Product {
   badgeColor?: string;
   badgeTextColor?: string;
   code: string;
+  category: 'flores' | 'paquetes' | 'complementos';
 }
 
 const findImage = (id: string) =>
@@ -27,6 +28,7 @@ export const products: Product[] = [
     badgeColor: 'bg-primary',
     badgeTextColor: 'text-primary-foreground',
     code: 'FE01',
+    category: 'flores',
   },
   {
     name: 'Rocío de Pasión',
@@ -39,6 +41,7 @@ export const products: Product[] = [
     badgeColor: 'bg-amber-500',
     badgeTextColor: 'text-white',
     code: 'FE02',
+    category: 'flores',
   },
   {
     name: 'Detalle Romántico',
@@ -51,6 +54,7 @@ export const products: Product[] = [
     badgeColor: 'bg-zinc-800',
     badgeTextColor: 'text-white',
     code: 'FE03',
+    category: 'paquetes',
   },
   {
     name: 'Pureza Blanca',
@@ -60,6 +64,7 @@ export const products: Product[] = [
     image: findImage('product-pureza-blanca'),
     imageAlt: 'Bouquet of white lilies',
     code: 'FE04',
+    category: 'flores',
   },
   {
     name: 'Pradera Silvestre',
@@ -69,6 +74,7 @@ export const products: Product[] = [
     image: findImage('product-pradera-silvestre'),
     imageAlt: 'Wildflower arrangement',
     code: 'FE05',
+    category: 'flores',
   },
   {
     name: 'Caja de Encanto',
@@ -81,6 +87,7 @@ export const products: Product[] = [
     badgeColor: 'bg-pink-500',
     badgeTextColor: 'text-white',
     code: 'FE06',
+    category: 'paquetes',
   },
   {
     name: 'Misterio Púrpura',
@@ -90,6 +97,7 @@ export const products: Product[] = [
     image: findImage('product-misterio-purpura'),
     imageAlt: 'Arrangement of orchids and violets',
     code: 'FE07',
+    category: 'flores',
   },
   {
     name: 'Amanecer Dorado',
@@ -99,6 +107,7 @@ export const products: Product[] = [
     image: findImage('product-amanecer-dorado'),
     imageAlt: 'Bouquet of sunflowers',
     code: 'FE08',
+    category: 'flores',
   },
   {
     name: 'Sonrisa de Sol',
@@ -108,6 +117,7 @@ export const products: Product[] = [
     image: findImage('product-sonrisa-de-sol'),
     imageAlt: 'Bouquet of yellow gerberas',
     code: 'FE09',
+    category: 'flores',
   },
   {
     name: 'Corazón de Rubí',
@@ -117,6 +127,7 @@ export const products: Product[] = [
     image: findImage('product-corazon-de-rubi'),
     imageAlt: 'Bouquet of red carnations',
     code: 'FE10',
+    category: 'flores',
   },
   {
     name: 'Beso de Ángel',
@@ -129,6 +140,7 @@ export const products: Product[] = [
     badgeColor: 'bg-green-500',
     badgeTextColor: 'text-white',
     code: 'FE11',
+    category: 'flores',
   },
   {
     name: 'Abrazo Cálido',
@@ -138,5 +150,16 @@ export const products: Product[] = [
     image: findImage('product-abrazo-calido'),
     imageAlt: 'Bouquet of orange and yellow flowers',
     code: 'FE12',
+    category: 'flores',
+  },
+  {
+    name: 'Amigo de Peluche',
+    price: 450,
+    description:
+      'Un adorable oso de peluche, el compañero perfecto para cualquier arreglo floral.',
+    image: findImage('product-oso-de-peluche'),
+    imageAlt: 'A cute teddy bear',
+    code: 'FE13',
+    category: 'complementos',
   },
 ];
