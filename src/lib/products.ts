@@ -14,7 +14,7 @@ export interface Product {
 }
 
 const findImage = (id: string) =>
-  PlaceHolderImages.find((img) => img.id === id)?.imageUrl || '/placeholder.jpg';
+  PlaceHolderImages.find((img) => img.id === id)?.imageUrl || 'https://placehold.co/800x1000/f8f5f6/1c0d11?text=Imagen+no+disponible';
 
 export const products: Product[] = [
   {
