@@ -48,7 +48,7 @@ export function ProductDetailModal({
               src={image}
               alt={imageAlt}
               fill
-              className="object-cover"
+              className="object-contain"
               sizes="(max-width: 767px) 100vw, 50vw"
             />
             {badge && (

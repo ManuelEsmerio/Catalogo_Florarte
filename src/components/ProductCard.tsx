@@ -23,7 +23,7 @@ export function ProductCard({ product, onOpenModal }: ProductCardProps) {
           src={image}
           alt={imageAlt}
           fill
-          className="object-cover transition-transform duration-700 group-hover:scale-110"
+          className="object-contain transition-transform duration-700 group-hover:scale-110"
           sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
         />
         {badge && (

@@ -25,34 +25,34 @@
       "imageHint": "roses chocolates"
     },
     {
-      "id": "product-pureza-blanca",
-      "description": "Minimalist elegance with selected white lilies, named Pureza Blanca",
-      "imageUrl": "/images/product-pureza-blanca.jpg",
-      "imageHint": "white lilies"
+      "id": "paquete-ramo-24-globo-peluche",
+      "description": "Incluye ramo de rosas rojas, globo, oso de peluche y moño decorativo. Ideal para sorprender.",
+      "imageUrl": "/images/paquete-ramo-24-globo-peluche.png",
+      "imageHint": "Paquete ramo 24 rosas globo y peluche"
     },
     {
-      "id": "product-pradera-silvestre",
-      "description": "An overflowing arrangement with seasonal flowers, named Pradera Silvestre",
-      "imageUrl": "/images/product-pradera-silvestre.jpg",
-      "imageHint": "wild flowers"
+      "id": "ferrero-24-piezas",
+      "description": "Estuche con 24 chocolates Ferrero Rocher, ideal para un regalo elegante. 🍫🌟",
+      "imageUrl": "/images/ferrero-24-piezas.webp",
+      "imageHint": "Ferrero Rocher 24 pz"
     },
     {
-      "id": "product-caja-de-encanto",
-      "description": "Premium luxury box with red roses and gold details, named Caja de Encanto",
-      "imageUrl": "/images/product-caja-de-encanto.jpg",
-      "imageHint": "rose box"
+      "id": "ferrero-16-pierzas",
+      "description": "Caja con 16 chocolates premium, para sorprender en ocasiones especiales. 🍫💛",
+      "imageUrl": "/images/ferrero-16-pierzas.webp",
+      "imageHint": "Ferrero Rocher 16 pzas"
     },
     {
-      "id": "product-misterio-purpura",
-      "description": "Orchids and violets that convey nobility, named Misterio Púrpura",
-      "imageUrl": "/images/product-misterio-purpura.jpg",
-      "imageHint": "purple orchids"
+      "id": "ferrero-8-piezas",
+      "description": "Caja con 8 chocolates Ferrero Rocher, ideal para un detalle dulce. 🍫✨",
+      "imageUrl": "/images/ferrero-8-piezas.webp",
+      "imageHint": "Ferrero Rocher 8 pzas"
     },
     {
-      "id": "product-amanecer-dorado",
-      "description": "Radiant sunflowers that combine any space, named Amanecer Dorado",
-      "imageUrl": "/images/product-amanecer-dorado.jpg",
-      "imageHint": "sunflowers"
+      "id": "ferrero-8-piezas-corazon",
+      "description": "Caja de corazón con 8 chocolates Ferrero Rocher, ideal para un detalle dulce. 🍫✨",
+      "imageUrl": "/images/ferrero-8-piezas-corazon.webp",
+      "imageHint": "Ferrero Corazon Rocher 8 pzas"
     },
     {
       "id": "product-sonrisa-de-sol",
