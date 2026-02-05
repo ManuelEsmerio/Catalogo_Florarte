@@ -59,6 +59,7 @@ export function ProductCard({ product, onOpenModal }: ProductCardProps) {
           <a
             href={generateProductWhatsAppLink(name, price, code)}
             target="_blank"
+
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
             className="flex-shrink-0 bg-[#25D366]/20 hover:bg-[#25D366]/30 text-green-700 rounded-full p-3 transition-all shadow-sm hover:shadow-md active:scale-95"
@@ -67,7 +68,7 @@ export function ProductCard({ product, onOpenModal }: ProductCardProps) {
             <MaterialIcon icon="chat_bubble" className="text-xl" />
           </a>
         </div>
-        <p className="text-xs text-muted-foreground mt-2 text-center">
+        <p className="text-[10px] text-muted-foreground mt-2 text-center">
           *El diseño y los colores pueden variar según disponibilidad.
         </p>
       </div>

@@ -3,7 +3,7 @@
     {
       "id": "hero-valentines",
       "description": "Beautiful bouquet of red roses and pink lilies for Valentine's Day",
-      "imageUrl": "/images/hero-valentines.jpg",
+      "imageUrl": "/images/hero-valentines.png",
       "imageHint": "red roses"
     },
     {
@@ -13,15 +13,15 @@
       "imageHint": "ramo 24 rosas bouquet"
     },
     {
-      "id": "product-rocio-de-pasion",
+      "id": "ramo-12-rosas",
       "description": "Vibrant arrangement of fresh tulips and lilies, named Rocío de Pasión",
-      "imageUrl": "/images/product-rocio-de-pasion.jpg",
+      "imageUrl": "/images/ramo-12-rosas.png",
       "imageHint": "tulips lilies"
     },
     {
-      "id": "product-detalle-romantico",
+      "id": "arreglo-espiral",
       "description": "Gift box with roses and gourmet chocolates, named Detalle Romántico",
-      "imageUrl": "/images/product-detalle-romantico.jpg",
+      "imageUrl": "/images/arreglo-espiral.png",
       "imageHint": "roses chocolates"
     },
     {
