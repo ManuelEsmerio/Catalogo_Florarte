@@ -198,6 +198,18 @@
       "description": "Arreglo Florarte 8.",
       "imageUrl": "/images/arreglo-surtido-8.png",
       "imageHint": "Arreglo Florarte 8"
+    },
+    {
+      "id": "arreglo-florarte-9",
+      "description": "Arreglo Florarte 9.",
+      "imageUrl": "/images/arreglo-surtido-9.png",
+      "imageHint": "Arreglo Florarte 9"
+    },
+    {
+      "id": "ferrero-corazon-5pz",
+      "description": "Chocolate Ferrero 5pz.",
+      "imageUrl": "/images/ferrero-corazon-5pz.png",
+      "imageHint": "Chocolate Ferrero 5pz."
     }
   ]
 }

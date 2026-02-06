@@ -69,7 +69,7 @@ export function ProductCard({ product, onOpenModal }: ProductCardProps) {
           </a>
         </div>
         <p className="text-[10px] text-muted-foreground mt-2 text-center">
-          *El diseño y los colores pueden variar según disponibilidad.
+          El diseño, colores y presentación de los arreglos florales, globos, peluches y demás complementos pueden variar según disponibilidad, conservando siempre la calidad y el estilo del producto mostrado.
         </p>
       </div>
     </div>

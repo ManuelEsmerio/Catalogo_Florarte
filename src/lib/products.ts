@@ -97,16 +97,16 @@ export const products: Product[] = [
     code: 'FE06',
     category: 'flores',
   },
-  {
-    name: 'Sonrisa Floral',
-    price: 920,
-    description:
-      'Un arreglo floral colorido y llamativo con rosas rojas, gerberas rosas, un girasol, lirios y alstroemerias, acompañado de follaje verde que le da volumen y frescura.',
-    image: findImage('arreglo-espiral-grande-colores'),
-    imageAlt: 'Arreglo espiral, floral de colores',
-    code: 'FE07',
-    category: 'flores',
-  },
+  // {
+  //   name: 'Sonrisa Floral',
+  //   price: 920,
+  //   description:
+  //     'Un arreglo floral colorido y llamativo con rosas rojas, gerberas rosas, un girasol, lirios y alstroemerias, acompañado de follaje verde que le da volumen y frescura.',
+  //   image: findImage('arreglo-espiral-grande-colores'),
+  //   imageAlt: 'Arreglo espiral, floral de colores',
+  //   code: 'FE07',
+  //   category: 'flores',
+  // },
   {
     name: 'Arreglo Corazon Chico',
     price: 650,
@@ -148,16 +148,16 @@ export const products: Product[] = [
     category: 'flores',
   },
 
-  // {
-  //   name: 'Arreglo Flores Surtidas v2',
-  //   price: 650,
-  //   description:
-  //     'Un arreglo floral elegante y vertical con rosas rojas, gerberas, lirios blancos y follaje tropical, estructurado con altura y contraste de colores para un efecto sofisticado.',
-  //   image: findImage('arreglo-surtido-2'),
-  //   imageAlt: 'Arreglo Surtido',
-  //   code: 'FE12',
-  //   category: 'flores',
-  // },
+  {
+    name: 'Arreglo Flores Surtidas Gerberas',
+    price: 650,
+    description:
+      'Un arreglo floral elegante y vertical con rosas rojas, gerberas, lirios blancos y follaje tropical, estructurado con altura y contraste de colores para un efecto sofisticado.',
+    image: findImage('arreglo-surtido-9'),
+    imageAlt: 'Arreglo Surtido Gerberas 9',
+    code: 'FE12',
+    category: 'flores',
+  },
   {
     name: 'Arreglo de Rosas en Capaz',
     price: 650,
@@ -168,16 +168,16 @@ export const products: Product[] = [
     code: 'FE13',
     category: 'flores',
   },
-  {
-    name: 'Arreglo Surtido Colores',
-    price: 650,
-    description:
-      'Un arreglo floral elegante y vertical con rosas rojas, gerberas, lirios blancos y follaje tropical, estructurado con altura y contraste de colores para un efecto sofisticado.',
-    image: findImage('arreglo-surtido-colores'),
-    imageAlt: 'Arreglo Surtido Colores',
-    code: 'FE14',
-    category: 'flores',
-  },
+  // {
+  //   name: 'Arreglo Surtido Colores',
+  //   price: 650,
+  //   description:
+  //     'Un arreglo floral elegante y vertical con rosas rojas, gerberas, lirios blancos y follaje tropical, estructurado con altura y contraste de colores para un efecto sofisticado.',
+  //   image: findImage('arreglo-surtido-colores'),
+  //   imageAlt: 'Arreglo Surtido Colores',
+  //   code: 'FE14',
+  //   category: 'flores',
+  // },
   {
     name: 'Ramo Surtido de Rosas',
     price: 650,
@@ -299,7 +299,7 @@ export const products: Product[] = [
   },
   {
     name: 'Ferrero Rocher 24 pzas',
-    price: 450,
+    price: 340,
     description:
       'Estuche con 24 chocolates Ferrero Rocher, ideal para un regalo elegante. 🍫🌟',
     image: findImage('ferrero-24-piezas'),
@@ -309,7 +309,7 @@ export const products: Product[] = [
   },
   {
     name: 'Ferrero Rocher 16 pzas',
-    price: 450,
+    price: 220,
     description:
       'Caja con 16 chocolates premium, para sorprender en ocasiones especiales. 🍫💛',
     image: findImage('ferrero-16-pierzas'),
@@ -319,7 +319,7 @@ export const products: Product[] = [
   },
   {
     name: 'Ferrero Rocher 8 pzas',
-    price: 450,
+    price: 110,
     description:
       'Caja con 8 chocolates Ferrero Rocher, ideal para un detalle dulce. 🍫✨',
     image: findImage('ferrero-8-piezas'),
@@ -329,7 +329,7 @@ export const products: Product[] = [
   },
   {
     name: 'Chocolate Ferrero caja corazón',
-    price: 450,
+    price: 130,
     description:
       'Caja de corazón con 8 chocolates Ferrero Rocher, ideal para un detalle dulce. 🍫✨',
     image: findImage('ferrero-8-piezas-corazon'),
@@ -339,7 +339,7 @@ export const products: Product[] = [
   },
   {
     name: 'Chocolate Ferrero caja corazón chico',
-    price: 1150,
+    price: 35,
     description:
       'Caja de corazón con 2 chocolates Ferrero Rocher, ideal para un detalle dulce. 🍫✨',
     image: findImage('ferrero-corazon-2pz'),
@@ -348,6 +348,19 @@ export const products: Product[] = [
     // badgeColor: 'bg-green-500',
     // badgeTextColor: 'text-white',
     code: 'CO05',
+    category: 'complementos',
+  },
+  {
+    name: 'Chocolate Ferrero 5 pz',
+    price: 70,
+    description:
+      'Caja de corazón con 5 chocolates Ferrero Rocher, ideal para un detalle dulce. 🍫✨',
+    image: findImage('ferrero-corazon-5pz'),
+    imageAlt: 'Chocolate Ferrero 5 pz',
+    // badge: 'NUEVO',
+    // badgeColor: 'bg-green-500',
+    // badgeTextColor: 'text-white',
+    code: 'CO06',
     category: 'complementos',
   },
   {
@@ -360,7 +373,7 @@ export const products: Product[] = [
     // badge: 'NUEVO',
     // badgeColor: 'bg-green-500',
     // badgeTextColor: 'text-white',
-    code: 'CO06',
+    code: 'CO07',
     category: 'complementos',
   },
   {
@@ -373,7 +386,7 @@ export const products: Product[] = [
     // badge: 'NUEVO',
     // badgeColor: 'bg-green-500',
     // badgeTextColor: 'text-white',
-    code: 'CO07',
+    code: 'CO08',
     category: 'complementos',
   },
 ];
