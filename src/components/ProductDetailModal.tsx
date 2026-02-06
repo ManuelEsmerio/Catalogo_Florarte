@@ -41,7 +41,7 @@ export function ProductDetailModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-3xl p-0 gap-0">
+      <DialogContent className="sm:max-w-3xl p-0 gap-0 max-h-[90vh] overflow-y-auto">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="relative aspect-[4/5] overflow-hidden rounded-t-lg md:rounded-l-lg md:rounded-t-none">
             <Image
@@ -64,6 +64,7 @@ export function ProductDetailModal({
           <div className="p-6 md:p-8 flex flex-col">
             <DialogHeader className="text-left">
               <DialogTitle className="text-3xl font-bold">{name}</DialogTitle>
+              <p className="text-sm text-muted-foreground pt-1">Código: {code}</p>
             </DialogHeader>
             <div className="my-4 flex-1">
               <DialogDescription className="text-base text-muted-foreground leading-relaxed">
