@@ -7,4 +7,5 @@ export type ImagePlaceholder = {
   imageHint: string;
 };
 
+export const imageCacheVersion = data.version;
 export const PlaceHolderImages: ImagePlaceholder[] = data.placeholderImages;

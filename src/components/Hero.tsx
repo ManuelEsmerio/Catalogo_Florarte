@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { PlaceHolderImages, imageCacheVersion } from '@/lib/placeholder-images';
 import { MaterialIcon } from './MaterialIcon';
 
 export function Hero() {
@@ -12,7 +12,7 @@ export function Hero() {
           <div className="relative flex min-h-[550px] flex-col items-center justify-center p-8 text-center">
             {heroImage && (
               <Image
-                src={heroImage.imageUrl}
+                src={`${heroImage.imageUrl}?v=${imageCacheVersion}`}
                 alt={heroImage.description}
                 fill
                 className="object-cover"

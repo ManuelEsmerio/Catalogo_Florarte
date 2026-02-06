@@ -1,4 +1,5 @@
 {
+  "version": 1,
   "placeholderImages": [
     {
       "id": "hero-valentines",
@@ -101,6 +102,30 @@
       "description": "Ramo de 50 rosas y girasoles.",
       "imageUrl": "/images/ramo-50-rosas-girasoles.png",
       "imageHint": "Ramo de 50 rosas y girasoles"
+    },
+    {
+      "id": "arreglo-espiral-grande-colores",
+      "description": "Arreglo doble espiral grande de colores.",
+      "imageUrl": "/images/arreglo-espiral-grande-colores.png",
+      "imageHint": "Arreglo doble espiral grande de colores"
+    },
+    {
+      "id": "Arreglo-6-rosas",
+      "description": "Arreglo corazon chico de 6 rosas.",
+      "imageUrl": "/images/Arreglo-6-rosas.png",
+      "imageHint": "Arreglo de 6 rosas rojas"
+    },
+    {
+      "id": "arreglo-espiral-solo-rosas-xl",
+      "description": "Rojo Infinito",
+      "imageUrl": "/images/arreglo-espiral-solo-rosas-xl.png",
+      "imageHint": "Arreglo espiral xl"
+    },
+    {
+      "id": "arreglo-surtido",
+      "description": "Arreglo Surtido.",
+      "imageUrl": "/images/arreglo-surtido.png",
+      "imageHint": "Arreglo Surtido"
     }
   ]
 }

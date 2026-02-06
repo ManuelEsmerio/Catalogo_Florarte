@@ -1,4 +1,4 @@
-import { PlaceHolderImages } from './placeholder-images';
+import { PlaceHolderImages, imageCacheVersion } from './placeholder-images';
 
 export interface Product {
   name: string;
@@ -13,12 +13,17 @@ export interface Product {
   category: 'flores' | 'paquetes' | 'complementos';
 }
 
-const findImage = (id: string) =>
-  PlaceHolderImages.find((img) => img.id === id)?.imageUrl || 'https://placehold.co/800x1000/f8f5f6/1c0d11?text=Imagen+no+disponible';
+const findImage = (id: string) => {
+  const imageUrl = PlaceHolderImages.find((img) => img.id === id)?.imageUrl;
+  if (imageUrl) {
+    return `${imageUrl}?v=${imageCacheVersion}`;
+  }
+  return 'https://placehold.co/800x1000/f8f5f6/1c0d11?text=Imagen+no+disponible';
+};
 
 export const products: Product[] = [
   {
-    name: 'Ramo 24 Rosas',
+    name: 'Ramo Floral 24 Rosas',
     price: 850,
     description:
       'Ramo con 24 rosas rojas, follaje natural y envoltura en papel coreano con moño decorativo. Ideal para regalo especial. 🌹',
@@ -31,7 +36,7 @@ export const products: Product[] = [
     category: 'flores',
   },
   {
-    name: 'Ramo 12 Rosas',
+    name: 'Ramo Floral 12 Rosas',
     price: 1200,
     description:
       'Ramo con 12 rosas rojas, follaje natural y envoltura en papel coreano con moño decorativo. Ideal para regalo especial. 🌹',
@@ -44,7 +49,7 @@ export const products: Product[] = [
     category: 'flores',
   },
   {
-    name: 'Arreglo Espiral',
+    name: 'Arreglo Espiral Simple',
     price: 950,
     description:
       'Arreglo con rosas rojas, lirios blancos, follaje natural y base decorativa, ideal para regalar en ocasiones especiales. 🌹🤍',
@@ -70,7 +75,7 @@ export const products: Product[] = [
     category: 'paquetes',
   },
   {
-    name: 'Ramo de 50 Rosas y Girasole',
+    name: 'Ramo Floral 50 Rosas y Girasole',
     price: 1100,
     description:
       'Ramo de 50 rosas rojas y 4 girasoles',
@@ -93,27 +98,27 @@ export const products: Product[] = [
     category: 'flores',
   },
   {
-    name: 'Misterio Púrpura',
+    name: 'Sonrisa Floral',
     price: 920,
     description:
-      'Orquídeas y violetas que transmiten nobleza y para personalidades nada obvias y muy seguras.',
-    image: findImage('product-misterio-purpura'),
-    imageAlt: 'Arrangement of orchids and violets',
+      'Un arreglo floral colorido y llamativo con rosas rojas, gerberas rosas, un girasol, lirios y alstroemerias, acompañado de follaje verde que le da volumen y frescura.',
+    image: findImage('arreglo-espiral-grande-colores'),
+    imageAlt: 'Arreglo espiral, floral de colores',
     code: 'FE07',
     category: 'flores',
   },
   {
-    name: 'Amanecer Dorado',
+    name: 'Arreglo Corazon Chico',
     price: 650,
     description:
-      'Girasoles radiantes que combinan con cualquier espacio y llenan de alegría el corazón de quien los recibe.',
-    image: findImage('product-amanecer-dorado'),
-    imageAlt: 'Bouquet of sunflowers',
+      'Un arreglo romántico con seis rosas rojas, follaje verde y detalles de flores blancas, presentado en una canasta con corazones dorados decorativos.',
+    image: findImage('Arreglo-6-rosas'),
+    imageAlt: 'Arreglo chico de 6 rosas rojas',
     code: 'FE08',
     category: 'flores',
   },
   {
-    name: 'Arreglo en espiral doble',
+    name: 'Arreglo Espiral Doble',
     price: 720,
     description:
       'Arreglo en espiral doble de rosas rojas',
@@ -123,7 +128,27 @@ export const products: Product[] = [
     category: 'flores',
   },
   {
-    name: 'Ramo de 50 rosas y girasoles',
+    name: 'Rojo Infinito',
+    price: 650,
+    description:
+      'Un arreglo grande y elegante de rosas rojas, dispuestas en forma de abanico con hojas verdes al centro, creando una presentación impactante y romántica.',
+    image: findImage('arreglo-espiral-solo-rosas-xl'),
+    imageAlt: 'Rojo Infinito',
+    code: 'FE10',
+    category: 'flores',
+  },
+  {
+    name: 'Arreglo Surtido',
+    price: 650,
+    description:
+      'Un arreglo floral elegante y vertical con rosas rojas, gerberas, lirios blancos y follaje tropical, estructurado con altura y contraste de colores para un efecto sofisticado.',
+    image: findImage('arreglo-surtido'),
+    imageAlt: 'Arreglo Surtido',
+    code: 'FE11',
+    category: 'flores',
+  },
+  {
+    name: 'Ramo Floral 50 Rosas y Girasoles',
     price: 880,
     description:
       'Ramo elegante de 50 rosas combinadas con girasoles, acompañado de un globo decorativo. Un detalle impactante, lleno de color y significado, ideal para sorprender en cualquier ocasión. 🌻🌹🎈',
