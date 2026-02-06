@@ -25,6 +25,18 @@
       "imageHint": "roses chocolates"
     },
     {
+      "id": "arreglo-espiral-doble",
+      "description": "Arreglo de espiral doble",
+      "imageUrl": "/images/arreglo-espiral-doble.png",
+      "imageHint": "paquete arreglo espiral doble"
+    },
+    {
+      "id": "ramo-50-rosas-globo",
+      "description": "Ramo de 50 rosas, girasoles y globo",
+      "imageUrl": "/images/ramo-50-rosas-girasole-globo.png",
+      "imageHint": "paquete ramo 50 rosas y girasoles"
+    },
+    {
       "id": "paquete-ramo-24-globo-peluche",
       "description": "Incluye ramo de rosas rojas, globo, oso de peluche y moño decorativo. Ideal para sorprender.",
       "imageUrl": "/images/paquete-ramo-24-globo-peluche.png",
@@ -67,22 +79,28 @@
       "imageHint": "Pasión 24 Rosas"
     },
     {
-      "id": "product-beso-de-angel",
-      "description": "Soft pink and white roses",
-      "imageUrl": "/images/product-beso-de-angel.jpg",
-      "imageHint": "pink roses"
+      "id": "ferrero-corazon-2pz",
+      "description": "Chocolares ferrero de corazón 2pz",
+      "imageUrl": "/images/ferrero-corazon-2pz.png",
+      "imageHint": "Ferrero 2 pz"
     },
     {
-      "id": "product-abrazo-calido",
-      "description": "Orange and yellow flowers",
-      "imageUrl": "/images/product-abrazo-calido.jpg",
-      "imageHint": "orange flowers"
+      "id": "globo-de-gas",
+      "description": "Globo de helio love you",
+      "imageUrl": "/images/Globo-de-gas.png",
+      "imageHint": "globo de gas love"
     },
     {
-      "id": "product-oso-de-peluche",
-      "description": "A cute teddy bear to complement any floral arrangement.",
-      "imageUrl": "/images/product-oso-de-peluche.jpg",
-      "imageHint": "teddy bear"
+      "id": "globo-de-gas-2",
+      "description": "Globo de helio de San Valentine.",
+      "imageUrl": "/images/Globo-de-gas-2.png",
+      "imageHint": "globo de gas san valentine"
+    },
+    {
+      "id": "ramo-50-rosas-girasoles",
+      "description": "Ramo de 50 rosas y girasoles.",
+      "imageUrl": "/images/ramo-50-rosas-girasoles.png",
+      "imageHint": "Ramo de 50 rosas y girasoles"
     }
   ]
 }
