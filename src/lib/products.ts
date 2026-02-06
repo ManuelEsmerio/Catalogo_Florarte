@@ -80,17 +80,17 @@ export const products: Product[] = [
     category: 'flores',
   },
   {
-    name: 'Caja de Encanto',
+    name: 'Florero 24 Rosas',
     price: 1450,
     description:
-      'Nuestra caja de lujo premium con rosas rojas y detalles en dorado para un regalo que impacta.',
-    image: findImage('product-caja-de-encanto'),
-    imageAlt: 'Luxury box with red roses',
+      'Elegante ramo con 24 rosas rojas en florero, ideal para expresar amor y admiración. ❤️✨',
+    image: findImage('florero-24-rosas'),
+    imageAlt: 'Florero 24 Rosas',
     badge: 'TOP VENTAS',
     badgeColor: 'bg-pink-500',
     badgeTextColor: 'text-white',
     code: 'FE06',
-    category: 'paquetes',
+    category: 'flores',
   },
   {
     name: 'Misterio Púrpura',
@@ -146,14 +146,14 @@ export const products: Product[] = [
     category: 'flores',
   },
   {
-    name: 'Abrazo Cálido',
+    name: 'Amor Floral',
     price: 990,
     description:
-      'Flores en tonos naranjas y amarillos que evocan la calidez de un abrazo sincero.',
-    image: findImage('product-abrazo-calido'),
-    imageAlt: 'Bouquet of orange and yellow flowers',
-    code: 'FE12',
-    category: 'flores',
+      'Arreglo con rosas, lirios, peluche, chocolates y globo. Perfecto para sorprender con amor. 🌹💖',
+    image: findImage('amor-floral'),
+    imageAlt: 'Arreglo con rosas, lirios, peluche, chocolates y globo',
+    code: 'PA02',
+    category: 'paquetes',
   },
   {
     name: 'Ferrero Rocher 24 pzas',

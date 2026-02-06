@@ -55,16 +55,16 @@
       "imageHint": "Ferrero Corazon Rocher 8 pzas"
     },
     {
-      "id": "product-sonrisa-de-sol",
-      "description": "Bright yellow gerberas",
-      "imageUrl": "/images/product-sonrisa-de-sol.jpg",
-      "imageHint": "yellow gerberas"
+      "id": "amor-floral",
+      "description": "Arreglo con rosas, lirios, peluche, chocolates y globo",
+      "imageUrl": "/images/amor-floral.png",
+      "imageHint": "Amor Floral"
     },
     {
-      "id": "product-corazon-de-rubi",
-      "description": "Deep red carnations",
-      "imageUrl": "/images/product-corazon-de-rubi.jpg",
-      "imageHint": "red carnations"
+      "id": "florero-24-rosas",
+      "description": "Pasión 24 Rosas",
+      "imageUrl": "/images/florero-24-rosas.png",
+      "imageHint": "Pasión 24 Rosas"
     },
     {
       "id": "product-beso-de-angel",
