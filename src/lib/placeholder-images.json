@@ -126,6 +126,78 @@
       "description": "Arreglo Surtido.",
       "imageUrl": "/images/arreglo-surtido.png",
       "imageHint": "Arreglo Surtido"
+    },
+    {
+      "id": "arreglo-surtido-2",
+      "description": "Arreglo Surtido 2.",
+      "imageUrl": "/images/arreglo-surtido-2.png",
+      "imageHint": "Arreglo Surtido 2"
+    },
+    {
+      "id": "arreglo-capaz-rosas",
+      "description": "Arreglo Capaz de Rosas.",
+      "imageUrl": "/images/arreglo-capaz.png",
+      "imageHint": "Arreglo Capaz de Rosas"
+    },
+    {
+      "id": "arreglo-surtido-colores",
+      "description": "Arreglo Surtido Colores.",
+      "imageUrl": "/images/arreglo-surtido-colores.png",
+      "imageHint": "Arreglo Surtido Colores"
+    },
+    {
+      "id": "ramo-surtido-rosas",
+      "description": "Ramo Surtido Rosas.",
+      "imageUrl": "/images/ramo-surtido-rosas.png",
+      "imageHint": "Ramo Surtido Rosas"
+    },
+    {
+      "id": "arreglo-florarte-1",
+      "description": "Arreglo Surtido 2.",
+      "imageUrl": "/images/arreglo-capaz-chico.png",
+      "imageHint": "Arreglo Surtido 2"
+    },
+    {
+      "id": "arreglo-florarte-2",
+      "description": "Arreglo Capaz de Rosas.",
+      "imageUrl": "/images/arreglo-rosas-rojas.png",
+      "imageHint": "Arreglo Capaz de Rosas"
+    },
+    {
+      "id": "arreglo-florarte-3",
+      "description": "Arreglo Surtido Colores.",
+      "imageUrl": "/images/florero-2-rosas.png",
+      "imageHint": "Arreglo Surtido Colores"
+    },
+    {
+      "id": "arreglo-florarte-4",
+      "description": "Arreglo Florarte 4.",
+      "imageUrl": "/images/florero-6-rosas.png",
+      "imageHint": "Arreglo Florarte 4"
+    },
+    {
+      "id": "arreglo-florarte-5",
+      "description": "Arreglo Florarte 5.",
+      "imageUrl": "/images/arreglo-surtido-2.png",
+      "imageHint": "Arreglo Florarte 5"
+    },
+    {
+      "id": "arreglo-florarte-6",
+      "description": "Arreglo Florarte 6",
+      "imageUrl": "/images/arreglo-surtido-6.png",
+      "imageHint": "Arreglo Florarte 6"
+    },
+    {
+      "id": "arreglo-florarte-7",
+      "description": "Arreglo Florarte 7.",
+      "imageUrl": "/images/arreglo-surtido-7.png",
+      "imageHint": "Arreglo Florarte 7"
+    },
+    {
+      "id": "arreglo-florarte-8",
+      "description": "Arreglo Florarte 8.",
+      "imageUrl": "/images/arreglo-surtido-8.png",
+      "imageHint": "Arreglo Florarte 8"
     }
   ]
 }

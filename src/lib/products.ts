@@ -138,7 +138,7 @@ export const products: Product[] = [
     category: 'flores',
   },
   {
-    name: 'Arreglo Surtido',
+    name: 'Arreglo Flores Surtidas',
     price: 650,
     description:
       'Un arreglo floral elegante y vertical con rosas rojas, gerberas, lirios blancos y follaje tropical, estructurado con altura y contraste de colores para un efecto sofisticado.',
@@ -147,6 +147,136 @@ export const products: Product[] = [
     code: 'FE11',
     category: 'flores',
   },
+
+  // {
+  //   name: 'Arreglo Flores Surtidas v2',
+  //   price: 650,
+  //   description:
+  //     'Un arreglo floral elegante y vertical con rosas rojas, gerberas, lirios blancos y follaje tropical, estructurado con altura y contraste de colores para un efecto sofisticado.',
+  //   image: findImage('arreglo-surtido-2'),
+  //   imageAlt: 'Arreglo Surtido',
+  //   code: 'FE12',
+  //   category: 'flores',
+  // },
+  {
+    name: 'Arreglo de Rosas en Capaz',
+    price: 650,
+    description:
+      'Un arreglo floral elegante y vertical con rosas rojas, gerberas, lirios blancos y follaje tropical, estructurado con altura y contraste de colores para un efecto sofisticado.',
+    image: findImage('arreglo-capaz-rosas'),
+    imageAlt: 'Arreglo Rosas en Capaz',
+    code: 'FE13',
+    category: 'flores',
+  },
+  {
+    name: 'Arreglo Surtido Colores',
+    price: 650,
+    description:
+      'Un arreglo floral elegante y vertical con rosas rojas, gerberas, lirios blancos y follaje tropical, estructurado con altura y contraste de colores para un efecto sofisticado.',
+    image: findImage('arreglo-surtido-colores'),
+    imageAlt: 'Arreglo Surtido Colores',
+    code: 'FE14',
+    category: 'flores',
+  },
+  {
+    name: 'Ramo Surtido de Rosas',
+    price: 650,
+    description:
+      'Un arreglo floral elegante y vertical con rosas rojas, gerberas, lirios blancos y follaje tropical, estructurado con altura y contraste de colores para un efecto sofisticado.',
+    image: findImage('ramo-surtido-rosas'),
+    imageAlt: 'Ramo Surtido Rosas',
+    code: 'FE15',
+    category: 'flores',
+  },
+  {
+    name: 'Arreglo en Rosas en Capaz Chica',
+    price: 650,
+    description:
+      'Arreglo en base de madera con rosas rojas, lirios blancos y follaje natural, ideal para sorprender.',
+    image: findImage('arreglo-florarte-1'),
+    imageAlt: 'Ramo Surtido Rosas',
+    code: 'FE16',
+    category: 'flores',
+  },
+  {
+    name: 'Arreglo 10 Rosas Rojas',
+    price: 650,
+    description:
+      'Arreglo piramidal con rosas rojas, lirios blancos y follaje natural, ideal para momentos especiales.',
+    image: findImage('arreglo-florarte-2'),
+    imageAlt: 'Ramo Surtido Rosas',
+    code: 'FE17',
+    category: 'flores',
+  },
+  {
+    name: 'Florero 2 Rosas Rojas',
+    price: 650,
+    description:
+      'Arreglo en florero con rosas rojas, flores blancas y follaje natural, ideal para expresar amor y cariño.',
+    image: findImage('arreglo-florarte-3'),
+    imageAlt: 'Ramo Surtido Rosas',
+    code: 'FE18',
+    category: 'flores',
+  },
+  {
+    name: 'Florero 6 Rosas Rojas',
+    price: 650,
+    description:
+      'Arreglo en florero con rosas rojas, flores blancas y follaje natural, ideal para expresar amor y cariño.',
+    image: findImage('arreglo-florarte-4'),
+    imageAlt: 'Ramo Surtido Rosas',
+    code: 'FE19',
+    category: 'flores',
+  },
+  {
+    name: 'Canasta Romance Floral',
+    price: 650,
+    description:
+      'Arreglo en canasta con rosas rojas, lirios blancos, gerberas rosadas y follaje natural, ideal para regalar.',
+    image: findImage('arreglo-florarte-5'),
+    imageAlt: 'Ramo Surtido Rosas',
+    code: 'FE20',
+    category: 'flores',
+  },
+
+
+
+
+
+  {
+    name: 'Florero 24 Rosas Rojas y Rosas',
+    price: 650,
+    description:
+      'Un arreglo floral elegante y vertical con rosas rojas, gerberas, lirios blancos y follaje tropical, estructurado con altura y contraste de colores para un efecto sofisticado.',
+    image: findImage('arreglo-florarte-6'),
+    imageAlt: 'Ramo Surtido Rosas',
+    code: 'FE21',
+    category: 'flores',
+  },
+  {
+    name: 'Caja de Corazon Rosas y Chocolates',
+    price: 650,
+    description:
+      'Un arreglo floral elegante y vertical con rosas rojas, gerberas, lirios blancos y follaje tropical, estructurado con altura y contraste de colores para un efecto sofisticado.',
+    image: findImage('arreglo-florarte-7'),
+    imageAlt: 'Ramo Surtido Rosas',
+    code: 'FE22',
+    category: 'flores',
+  },
+  {
+    name: 'Ramo 50 Rosas Rojas y Rosas',
+    price: 650,
+    description:
+      'Un arreglo floral elegante y vertical con rosas rojas, gerberas, lirios blancos y follaje tropical, estructurado con altura y contraste de colores para un efecto sofisticado.',
+    image: findImage('arreglo-florarte-8'),
+    imageAlt: 'Ramo Surtido Rosas',
+    code: 'FE23',
+    category: 'flores',
+  },
+
+
+
+
   {
     name: 'Ramo Floral 50 Rosas y Girasoles',
     price: 880,
@@ -214,9 +344,9 @@ export const products: Product[] = [
       'Caja de corazón con 2 chocolates Ferrero Rocher, ideal para un detalle dulce. 🍫✨',
     image: findImage('ferrero-corazon-2pz'),
     imageAlt: 'Chocolate Ferrero caja corazón chico',
-    badge: 'NUEVO',
-    badgeColor: 'bg-green-500',
-    badgeTextColor: 'text-white',
+    // badge: 'NUEVO',
+    // badgeColor: 'bg-green-500',
+    // badgeTextColor: 'text-white',
     code: 'CO05',
     category: 'complementos',
   },
@@ -227,9 +357,9 @@ export const products: Product[] = [
       'Globo metalico de helio, ideal para un regalo especial.',
     image: findImage('globo-de-gas-2'),
     imageAlt: 'Globo de helio 14 de Febrero',
-    badge: 'NUEVO',
-    badgeColor: 'bg-green-500',
-    badgeTextColor: 'text-white',
+    // badge: 'NUEVO',
+    // badgeColor: 'bg-green-500',
+    // badgeTextColor: 'text-white',
     code: 'CO06',
     category: 'complementos',
   },
@@ -240,9 +370,9 @@ export const products: Product[] = [
       'Globo metalico de helio, ideal para un regalo especial.',
     image: findImage('globo-de-gas'),
     imageAlt: 'Globo de helio "love you"',
-    badge: 'NUEVO',
-    badgeColor: 'bg-green-500',
-    badgeTextColor: 'text-white',
+    // badge: 'NUEVO',
+    // badgeColor: 'bg-green-500',
+    // badgeTextColor: 'text-white',
     code: 'CO07',
     category: 'complementos',
   },
