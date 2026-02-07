@@ -9,8 +9,9 @@ const DeadlineBanner = () => {
   const [isAfterDeadline, setIsAfterDeadline] = useState<boolean | null>(null);
 
   useEffect(() => {
-    // Set the deadline for the next Valentine's Day
-    const deadline = new Date('2025-02-13T18:00:00');
+    // Set the deadline for the next Valentine's Day.
+    // Time is set to Mexico City time (UTC-6).
+    const deadline = new Date('2025-02-13T18:00:00-06:00');
     const now = new Date();
     setIsAfterDeadline(now > deadline);
   }, []);
