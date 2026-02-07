@@ -10,7 +10,7 @@ const DeadlineBanner = () => {
 
   useEffect(() => {
     // Set the deadline for the next Valentine's Day.
-    // Time is set to Mexico City time (UTC-6).
+    // Time is set for Tequila, Jalisco, Mexico (America/Mexico_City, which is UTC-6 during winter).
     const deadline = new Date('2025-02-13T18:00:00-06:00');
     const now = new Date();
     setIsAfterDeadline(now > deadline);
