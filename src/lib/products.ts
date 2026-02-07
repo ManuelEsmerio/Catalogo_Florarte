@@ -11,6 +11,7 @@ export interface Product {
   badgeTextColor?: string;
   code: string;
   category: 'flores' | 'paquetes' | 'complementos';
+  isAvailable: boolean;
 }
 
 const findImage = (id: string) => {
@@ -23,79 +24,85 @@ const findImage = (id: string) => {
 
 export const products: Product[] = [
   {
-    name: 'Ramo Floral 24 Rosas',
-    price: 850,
+    name: 'Pasión Eterna',
+    price: 1250,
     description:
-      'Ramo con 24 rosas rojas, follaje natural y envoltura en papel coreano con moño decorativo. Ideal para regalo especial. 🌹',
+      '24 rosas rojas premium con envoltura elegante. Ideal para decir “te amo” sin palabras.',
     image: findImage('ramo-24-rosas'),
     imageAlt: 'Ramo floral de 24 rosas rojas',
-    badge: 'FAVORITO DE TODOS',
-    badgeColor: 'bg-primary',
-    badgeTextColor: 'text-primary-foreground',
+    // badge: 'FAVORITO DE TODOS',
+    // badgeColor: 'bg-primary',
+    // badgeTextColor: 'text-primary-foreground',
     code: 'FE01',
     category: 'flores',
+    isAvailable: true,
   },
   {
-    name: 'Ramo Floral 12 Rosas',
-    price: 1200,
+    name: 'Dulce Encanto',
+    price: 750,
     description:
-      'Ramo con 12 rosas rojas, follaje natural y envoltura en papel coreano con moño decorativo. Ideal para regalo especial. 🌹',
+      '12 rosas rojas con detalles naturales. Perfecto para sorprender en cualquier ocasión.',
     image: findImage('ramo-12-rosas'),
     imageAlt: 'Ramo floral de 12 rosas rojas',
-    badge: 'NUEVO',
-    badgeColor: 'bg-primary',
-    badgeTextColor: 'text-primary-foreground',
+    // badge: 'NUEVO',
+    // badgeColor: 'bg-primary',
+    // badgeTextColor: 'text-primary-foreground',
     code: 'FE02',
     category: 'flores',
+    isAvailable: true,
   },
   {
-    name: 'Arreglo Espiral Simple',
-    price: 950,
+    name: 'Elegancia Natural',
+    price: 890,
     description:
-      'Arreglo con rosas rojas, lirios blancos, follaje natural y base decorativa, ideal para regalar en ocasiones especiales. 🌹🤍',
+      'Rosas y lilis en diseño vertical. Un detalle sofisticado y lleno de vida.',
     image: findImage('arreglo-espiral'),
     imageAlt: 'Arreglo floral de rosas en espiral',
-    badge: 'EXCLUSIVO',
-    badgeColor: 'bg-primary',
-    badgeTextColor: 'text-primary-foreground',
+    // badge: 'EXCLUSIVO',
+    // badgeColor: 'bg-primary',
+    // badgeTextColor: 'text-primary-foreground',
     code: 'FE03',
     category: 'flores',
+    isAvailable: true,
   },
   {
-    name: 'Paquete Romance',
-    price: 780,
+    name: 'Amor Total',
+    price: 1550,
     description:
-      'Incluye ramo de rosas rojas, globo, oso de peluche y moño decorativo. Ideal para sorprender.',
+      'Ramo con globo, peluche y rosas. El paquete ideal para enamorar.',
     image: findImage('paquete-ramo-24-globo-peluche'),
     imageAlt: 'Paquete ramo de 24 rosas rojas',
     code: 'PA01',
-    badge: 'PROMOCIÓN',
-    badgeColor: 'bg-primary',
-    badgeTextColor: 'text-primary-foreground',
+    // badge: 'PROMOCIÓN',
+    // badgeColor: 'bg-primary',
+    // badgeTextColor: 'text-primary-foreground',
     category: 'paquetes',
+    isAvailable: true,
   },
   {
-    name: 'Ramo Floral 50 Rosas y Girasole',
-    price: 1100,
+    name: 'Amor Radiante',
+    price: 2700,
     description:
-      'Ramo de 50 rosas rojas y 4 girasoles',
+      '50 rosas rojas con girasoles vibrantes. Un detalle lleno de amor y alegría.',
     image: findImage('ramo-50-rosas-girasoles'),
     imageAlt: 'Ramo de 50 rosas rojas y 4 girasoles',
     code: 'FE05',
     category: 'flores',
+    isAvailable: true,
   },
   {
-    name: 'Florero 24 Rosas',
-    price: 1450,
+    name: 'Clásico Perfecto',
+    price: 1400,
     description:
-      'Elegante ramo con 24 rosas rojas en florero, ideal para expresar amor y admiración. ❤️✨',
+      '24 rosas en florero de cristal. Elegancia que enamora en cualquier momento.',
     image: findImage('florero-24-rosas'),
     imageAlt: 'Florero 24 Rosas',
-    badge: 'TOP VENTAS',
-    badgeColor: 'bg-pink-500',
-    badgeTextColor: 'text-white',
+    // badge: 'TOP VENTAS',
+    // badgeColor: 'bg-pink-500',
+    // badgeTextColor: 'text-white',
     code: 'FE06',
     category: 'flores',
+    isAvailable: true,
   },
   // {
   //   name: 'Sonrisa Floral',
@@ -106,26 +113,29 @@ export const products: Product[] = [
   //   imageAlt: 'Arreglo espiral, floral de colores',
   //   code: 'FE07',
   //   category: 'flores',
+  //   isAvailable: true,
   // },
   {
-    name: 'Arreglo Corazon Chico',
-    price: 650,
+    name: 'Latido de Amor',
+    price: 400,
     description:
-      'Un arreglo romántico con seis rosas rojas, follaje verde y detalles de flores blancas, presentado en una canasta con corazones dorados decorativos.',
+      'Rosas en forma de corazón. Un detalle tierno para decir “te quiero”.',
     image: findImage('Arreglo-6-rosas'),
     imageAlt: 'Arreglo chico de 6 rosas rojas',
     code: 'FE08',
     category: 'flores',
+    isAvailable: true,
   },
   {
-    name: 'Arreglo Espiral Doble',
-    price: 720,
+    name: 'Doble Elegancia',
+    price: 1250,
     description:
-      'Arreglo en espiral doble de rosas rojas',
+      'Diseño vertical con rosas y lirios. Sofisticación en cada detalle.',
     image: findImage('arreglo-espiral-doble'),
     imageAlt: 'Arreglo en espiral doble',
     code: 'FE09',
     category: 'flores',
+    isAvailable: true,
   },
   {
     name: 'Rojo Infinito',
@@ -136,6 +146,7 @@ export const products: Product[] = [
     imageAlt: 'Rojo Infinito',
     code: 'FE10',
     category: 'flores',
+    isAvailable: true,
   },
   {
     name: 'Arreglo Flores Surtidas',
@@ -146,6 +157,7 @@ export const products: Product[] = [
     imageAlt: 'Arreglo Surtido',
     code: 'FE11',
     category: 'flores',
+    isAvailable: true,
   },
 
   {
@@ -157,6 +169,7 @@ export const products: Product[] = [
     imageAlt: 'Arreglo Surtido Gerberas 9',
     code: 'FE12',
     category: 'flores',
+    isAvailable: true,
   },
   {
     name: 'Arreglo de Rosas en Capaz',
@@ -167,6 +180,7 @@ export const products: Product[] = [
     imageAlt: 'Arreglo Rosas en Capaz',
     code: 'FE13',
     category: 'flores',
+    isAvailable: true,
   },
   // {
   //   name: 'Arreglo Surtido Colores',
@@ -177,6 +191,7 @@ export const products: Product[] = [
   //   imageAlt: 'Arreglo Surtido Colores',
   //   code: 'FE14',
   //   category: 'flores',
+  //   isAvailable: true,
   // },
   {
     name: 'Ramo Surtido de Rosas',
@@ -187,6 +202,7 @@ export const products: Product[] = [
     imageAlt: 'Ramo Surtido Rosas',
     code: 'FE15',
     category: 'flores',
+    isAvailable: true,
   },
   {
     name: 'Arreglo en Rosas en Capaz Chica',
@@ -197,6 +213,7 @@ export const products: Product[] = [
     imageAlt: 'Ramo Surtido Rosas',
     code: 'FE16',
     category: 'flores',
+    isAvailable: true,
   },
   {
     name: 'Arreglo 10 Rosas Rojas',
@@ -207,6 +224,7 @@ export const products: Product[] = [
     imageAlt: 'Ramo Surtido Rosas',
     code: 'FE17',
     category: 'flores',
+    isAvailable: true,
   },
   {
     name: 'Florero 2 Rosas Rojas',
@@ -217,6 +235,7 @@ export const products: Product[] = [
     imageAlt: 'Ramo Surtido Rosas',
     code: 'FE18',
     category: 'flores',
+    isAvailable: true,
   },
   {
     name: 'Florero 6 Rosas Rojas',
@@ -227,6 +246,7 @@ export const products: Product[] = [
     imageAlt: 'Ramo Surtido Rosas',
     code: 'FE19',
     category: 'flores',
+    isAvailable: true,
   },
   {
     name: 'Canasta Romance Floral',
@@ -237,6 +257,7 @@ export const products: Product[] = [
     imageAlt: 'Ramo Surtido Rosas',
     code: 'FE20',
     category: 'flores',
+    isAvailable: true,
   },
 
 
@@ -252,6 +273,7 @@ export const products: Product[] = [
     imageAlt: 'Ramo Surtido Rosas',
     code: 'FE21',
     category: 'flores',
+    isAvailable: true,
   },
   {
     name: 'Caja de Corazon Rosas y Chocolates',
@@ -262,6 +284,7 @@ export const products: Product[] = [
     imageAlt: 'Ramo Surtido Rosas',
     code: 'FE22',
     category: 'flores',
+    isAvailable: true,
   },
   {
     name: 'Ramo 50 Rosas Rojas y Rosas',
@@ -272,6 +295,7 @@ export const products: Product[] = [
     imageAlt: 'Ramo Surtido Rosas',
     code: 'FE23',
     category: 'flores',
+    isAvailable: true,
   },
 
 
@@ -286,6 +310,7 @@ export const products: Product[] = [
     imageAlt: 'Ramo de 50 rosas y girasoles',
     code: 'PA03',
     category: 'paquetes',
+    isAvailable: true,
   },
   {
     name: 'Amor Floral',
@@ -296,6 +321,7 @@ export const products: Product[] = [
     imageAlt: 'Arreglo con rosas, lirios, peluche, chocolates y globo',
     code: 'PA02',
     category: 'paquetes',
+    isAvailable: true,
   },
   {
     name: 'Ferrero Rocher 24 pzas',
@@ -306,6 +332,7 @@ export const products: Product[] = [
     imageAlt: 'Ferrero Rocher 24 pzas',
     code: 'CO01',
     category: 'complementos',
+    isAvailable: true,
   },
   {
     name: 'Ferrero Rocher 16 pzas',
@@ -316,6 +343,7 @@ export const products: Product[] = [
     imageAlt: 'Ferrero Rocher 16 pzas',
     code: 'CO02',
     category: 'complementos',
+    isAvailable: true,
   },
   {
     name: 'Ferrero Rocher 8 pzas',
@@ -326,6 +354,7 @@ export const products: Product[] = [
     imageAlt: 'Ferrero Rocher 8 pz',
     code: 'CO03',
     category: 'complementos',
+    isAvailable: true,
   },
   {
     name: 'Chocolate Ferrero caja corazón',
@@ -336,6 +365,7 @@ export const products: Product[] = [
     imageAlt: 'Chocolate Ferrero caja corazón',
     code: 'CO04',
     category: 'complementos',
+    isAvailable: true,
   },
   {
     name: 'Chocolate Ferrero caja corazón chico',
@@ -349,6 +379,7 @@ export const products: Product[] = [
     // badgeTextColor: 'text-white',
     code: 'CO05',
     category: 'complementos',
+    isAvailable: true,
   },
   {
     name: 'Chocolate Ferrero 5 pz',
@@ -362,6 +393,7 @@ export const products: Product[] = [
     // badgeTextColor: 'text-white',
     code: 'CO06',
     category: 'complementos',
+    isAvailable: true,
   },
   {
     name: 'Globo de helio 14 de Febrero',
@@ -375,6 +407,7 @@ export const products: Product[] = [
     // badgeTextColor: 'text-white',
     code: 'CO07',
     category: 'complementos',
+    isAvailable: true,
   },
   {
     name: 'Globo de helio "love you" ',
@@ -388,5 +421,6 @@ export const products: Product[] = [
     // badgeTextColor: 'text-white',
     code: 'CO08',
     category: 'complementos',
+    isAvailable: true,
   },
 ];

@@ -11,6 +11,7 @@ import type { Product } from '@/lib/products';
 import { generateProductWhatsAppLink } from '@/lib/whatsapp';
 import Image from 'next/image';
 import { MaterialIcon } from './MaterialIcon';
+import { Button } from './ui/button';
 
 interface ProductDetailModalProps {
   product: Product | null;
@@ -37,6 +38,7 @@ export function ProductDetailModal({
     badge,
     badgeColor,
     badgeTextColor,
+    isAvailable,
   } = product;
 
   return (
@@ -60,11 +62,22 @@ export function ProductDetailModal({
                 </span>
               </div>
             )}
+             {!isAvailable && (
+              <div className="absolute top-4 right-4 z-10">
+                <span
+                  className="text-xs font-bold uppercase px-3 py-1 rounded-full shadow-lg bg-destructive text-destructive-foreground"
+                >
+                  Agotado
+                </span>
+              </div>
+            )}
           </div>
           <div className="p-6 md:p-8 flex flex-col">
             <DialogHeader className="text-left">
               <DialogTitle className="text-3xl font-bold">{name}</DialogTitle>
-              <p className="text-sm text-muted-foreground pt-1">Código: {code}</p>
+              <p className="text-sm text-muted-foreground pt-1">
+                Código: {code}
+              </p>
             </DialogHeader>
             <div className="my-4 flex-1">
               <DialogDescription className="text-base text-muted-foreground leading-relaxed">
@@ -79,21 +92,29 @@ export function ProductDetailModal({
                 <p className="text-lg font-bold text-primary leading-tight -mt-1">
                   MXN
                 </p>
-                <p className="text-xs text-muted-foreground mt-1">
-                  + ENVÍO
-                </p>
+                <p className="text-xs text-muted-foreground mt-1">+ ENVÍO</p>
               </div>
-              <a
-                className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full py-3.5 px-5 font-bold text-base whitespace-nowrap transition-all shadow-md hover:shadow-lg active:scale-95 mt-2"
-                href={generateProductWhatsAppLink(name, price, code)}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MaterialIcon icon="chat" className="text-xl" />
-                Pedir por WhatsApp
-              </a>
+              {isAvailable ? (
+                <a
+                  className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full py-3.5 px-5 font-bold text-base whitespace-nowrap transition-all shadow-md hover:shadow-lg active:scale-95 mt-2"
+                  href={generateProductWhatsAppLink(name, price, code)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MaterialIcon icon="chat" className="text-xl" />
+                  Pedir por WhatsApp
+                </a>
+              ) : (
+                <Button disabled className="w-full py-3.5 px-5 text-base mt-2" size="lg">
+                  <MaterialIcon icon="block" className="text-xl mr-2" />
+                  Producto Agotado
+                </Button>
+              )}
               <p className="text-xs text-muted-foreground mt-2 text-center">
-                El diseño, colores y presentación de los arreglos florales, globos, peluches y demás complementos pueden variar según disponibilidad, conservando siempre la calidad y el estilo del producto mostrado.
+                El diseño, colores y presentación de los arreglos florales,
+                globos, peluches y demás complementos pueden variar según
+                disponibilidad, conservando siempre la calidad y el estilo del
+                producto mostrado.
               </p>
             </div>
           </div>

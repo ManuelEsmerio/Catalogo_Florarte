@@ -1,7 +1,6 @@
 'use client';
 
 import { useMemo, useState, useEffect } from 'react';
-import { products } from '@/lib/products';
 import type { Product } from '@/lib/products';
 import { ProductCard } from './ProductCard';
 import { ProductDetailModal } from './ProductDetailModal';
@@ -19,7 +18,7 @@ const PRODUCTS_PER_PAGE = 8;
 const categories = ['Todos', 'Flores', 'Paquetes', 'Complementos'];
 type Category = 'Todos' | 'Flores' | 'Paquetes' | 'Complementos';
 
-export function Catalog() {
+export function Catalog({ products }: { products: Product[] }) {
   const [visibleCount, setVisibleCount] = useState(PRODUCTS_PER_PAGE);
   const [sortBy, setSortBy] = useState('recent');
   const [selectedCategory, setSelectedCategory] = useState<Category>('Todos');
@@ -31,7 +30,10 @@ export function Catalog() {
 
     // Filter by Category
     if (selectedCategory !== 'Todos') {
-      const categoryLower = selectedCategory.toLowerCase() as 'flores' | 'paquetes' | 'complementos';
+      const categoryLower = selectedCategory.toLowerCase() as
+        | 'flores'
+        | 'paquetes'
+        | 'complementos';
       tempProducts = tempProducts.filter(
         (product) => product.category === categoryLower
       );
@@ -48,9 +50,10 @@ export function Catalog() {
     }
 
     return tempProducts;
-  }, [selectedCategory, searchTerm]);
+  }, [selectedCategory, searchTerm, products]);
 
   const sortedProducts = useMemo(() => {
+    const initialSortOrder = products.map(p => p.code);
     return [...filteredProducts].sort((a, b) => {
       switch (sortBy) {
         case 'price-asc':
@@ -59,11 +62,10 @@ export function Catalog() {
           return b.price - a.price;
         case 'recent':
         default:
-          // Assuming the original order is by most recent
-          return products.indexOf(a) - products.indexOf(b);
+          return initialSortOrder.indexOf(a.code) - initialSortOrder.indexOf(b.code);
       }
     });
-  }, [sortBy, filteredProducts]);
+  }, [sortBy, filteredProducts, products]);
 
   useEffect(() => {
     setVisibleCount(PRODUCTS_PER_PAGE);
@@ -146,7 +148,9 @@ export function Catalog() {
         </div>
         {sortedProducts.length === 0 && (
           <div className="text-center py-16">
-            <p className="text-muted-foreground text-lg">No se encontraron productos.</p>
+            <p className="text-muted-foreground text-lg">
+              No se encontraron productos.
+            </p>
           </div>
         )}
         {visibleCount < sortedProducts.length && (
@@ -160,7 +164,8 @@ export function Catalog() {
               Cargar más productos
             </Button>
             <p className="text-xs text-muted-foreground font-medium">
-              Mostrando {showingCount} de {sortedProducts.length} arreglos exclusivos
+              Mostrando {showingCount} de {sortedProducts.length} arreglos
+              exclusivos
             </p>
           </div>
         )}

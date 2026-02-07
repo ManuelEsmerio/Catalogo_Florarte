@@ -1,8 +1,20 @@
 import { generateGeneralWhatsAppLink } from '@/lib/whatsapp';
 import { MaterialIcon } from './MaterialIcon';
 import { Logo } from './Logo';
+import { Button } from './ui/button';
+import { SlidersHorizontal, User } from 'lucide-react';
 
-export function Header() {
+interface HeaderProps {
+  isAuthenticated: boolean;
+  onLoginClick: () => void;
+  onAdminClick: () => void;
+}
+
+export function Header({
+  isAuthenticated,
+  onLoginClick,
+  onAdminClick,
+}: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 bg-background/80 dark:bg-background/80 backdrop-blur-md border-b border-primary/10 px-4 md:px-20 lg:px-40 py-3">
       <div className="flex items-center justify-between max-w-[1200px] mx-auto">
@@ -40,6 +52,15 @@ export function Header() {
             <MaterialIcon icon="chat" className="text-base" />
             Pedir Ahora
           </a>
+          {isAuthenticated ? (
+            <Button variant="outline" size="icon" onClick={onAdminClick}>
+              <SlidersHorizontal className="size-4" />
+            </Button>
+          ) : (
+            <Button variant="outline" size="icon" onClick={onLoginClick}>
+              <User className="size-4" />
+            </Button>
+          )}
         </div>
       </div>
     </header>

@@ -3,6 +3,7 @@ import type { Product } from '@/lib/products';
 import { Button } from './ui/button';
 import { generateProductWhatsAppLink } from '@/lib/whatsapp';
 import { MaterialIcon } from './MaterialIcon';
+import { cn } from '@/lib/utils';
 
 type ProductCardProps = {
   product: Product;
@@ -10,8 +11,17 @@ type ProductCardProps = {
 };
 
 export function ProductCard({ product, onOpenModal }: ProductCardProps) {
-  const { name, price, image, imageAlt, badge, badgeColor, badgeTextColor, code } =
-    product;
+  const {
+    name,
+    price,
+    image,
+    imageAlt,
+    badge,
+    badgeColor,
+    badgeTextColor,
+    code,
+    isAvailable,
+  } = product;
 
   return (
     <div
@@ -35,6 +45,15 @@ export function ProductCard({ product, onOpenModal }: ProductCardProps) {
             </span>
           </div>
         )}
+        {!isAvailable && (
+           <div className="absolute top-4 right-4 z-10">
+            <span
+              className="text-xs font-bold uppercase px-3 py-1 rounded-full shadow-lg bg-destructive text-destructive-foreground"
+            >
+              Agotado
+            </span>
+          </div>
+        )}
       </div>
       <div className="p-4 sm:p-5 flex flex-col flex-1">
         <div className="flex justify-between items-start gap-4 flex-1">
@@ -55,24 +74,40 @@ export function ProductCard({ product, onOpenModal }: ProductCardProps) {
           <Button
             variant="outline"
             className="w-full font-bold border-primary/20 text-primary hover:bg-primary/5 hover:text-primary"
-            tabIndex={-1} // The whole card is clickable, so this button is just for visual cues
+            tabIndex={-1}
           >
             Ver detalles
           </Button>
           <a
-            href={generateProductWhatsAppLink(name, price, code)}
+            href={
+              isAvailable ? generateProductWhatsAppLink(name, price, code) : undefined
+            }
             target="_blank"
-
             rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="flex-shrink-0 bg-[#25D366]/20 hover:bg-[#25D366]/30 text-green-700 rounded-full p-3 transition-all shadow-sm hover:shadow-md active:scale-95"
-            aria-label="Pedir por WhatsApp"
+            onClick={(e) => {
+              if (!isAvailable) {
+                e.preventDefault();
+              }
+              e.stopPropagation();
+            }}
+            className={cn(
+              'flex-shrink-0 rounded-full p-3 transition-all shadow-sm hover:shadow-md active:scale-95',
+              isAvailable
+                ? 'bg-[#25D366]/20 hover:bg-[#25D366]/30 text-green-700'
+                : 'bg-muted text-muted-foreground cursor-not-allowed opacity-70'
+            )}
+            aria-label={
+              isAvailable ? 'Pedir por WhatsApp' : 'Producto agotado'
+            }
+            aria-disabled={!isAvailable}
           >
             <MaterialIcon icon="chat_bubble" className="text-xl" />
           </a>
         </div>
         <p className="text-[10px] text-muted-foreground mt-2 text-center">
-          El diseño, colores y presentación de los arreglos florales, globos, peluches y demás complementos pueden variar según disponibilidad, conservando siempre la calidad y el estilo del producto mostrado.
+          El diseño, colores y presentación de los arreglos florales, globos,
+          peluches y demás complementos pueden variar según disponibilidad,
+          conservando siempre la calidad y el estilo del producto mostrado.
         </p>
       </div>
     </div>
