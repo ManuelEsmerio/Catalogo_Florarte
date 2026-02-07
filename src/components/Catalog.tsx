@@ -13,6 +13,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 
 const PRODUCTS_PER_PAGE = 8;
 const categories = ['Todos', 'Flores', 'Paquetes', 'Complementos'];
@@ -23,16 +24,31 @@ export function Catalog() {
   const [sortBy, setSortBy] = useState('recent');
   const [selectedCategory, setSelectedCategory] = useState<Category>('Todos');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [searchTerm, setSearchTerm] = useState('');
 
   const filteredProducts = useMemo(() => {
-    if (selectedCategory === 'Todos') {
-      return products;
+    let tempProducts = products;
+
+    // Filter by Category
+    if (selectedCategory !== 'Todos') {
+      const categoryLower = selectedCategory.toLowerCase() as 'flores' | 'paquetes' | 'complementos';
+      tempProducts = tempProducts.filter(
+        (product) => product.category === categoryLower
+      );
     }
-    const categoryLower = selectedCategory.toLowerCase() as 'flores' | 'paquetes' | 'complementos';
-    return products.filter(
-      (product) => product.category === categoryLower
-    );
-  }, [selectedCategory]);
+
+    // Filter by Search Term
+    if (searchTerm.trim()) {
+      const lowercasedTerm = searchTerm.toLowerCase().trim();
+      tempProducts = tempProducts.filter((product) => {
+        const searchableText =
+          `${product.name} ${product.description} ${product.code} ${product.category}`.toLowerCase();
+        return searchableText.includes(lowercasedTerm);
+      });
+    }
+
+    return tempProducts;
+  }, [selectedCategory, searchTerm]);
 
   const sortedProducts = useMemo(() => {
     return [...filteredProducts].sort((a, b) => {
@@ -51,7 +67,7 @@ export function Catalog() {
 
   useEffect(() => {
     setVisibleCount(PRODUCTS_PER_PAGE);
-  }, [selectedCategory, sortBy]);
+  }, [selectedCategory, sortBy, searchTerm]);
 
   const visibleProducts = useMemo(
     () => sortedProducts.slice(0, visibleCount),
@@ -85,9 +101,15 @@ export function Catalog() {
                 Regalos que Roban Suspiros
               </h2>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex flex-col md:flex-row items-stretch md:items-center gap-4">
+              <Input
+                placeholder="Buscar por rosas, chocolates..."
+                className="w-full md:w-[240px]"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
               <Select onValueChange={setSortBy} defaultValue="recent">
-                <SelectTrigger className="w-[220px] text-sm">
+                <SelectTrigger className="w-full md:w-[220px] text-sm">
                   <SelectValue placeholder="Ordenar por" />
                 </SelectTrigger>
                 <SelectContent>
@@ -124,7 +146,7 @@ export function Catalog() {
         </div>
         {sortedProducts.length === 0 && (
           <div className="text-center py-16">
-            <p className="text-muted-foreground text-lg">No se encontraron productos en esta categoría.</p>
+            <p className="text-muted-foreground text-lg">No se encontraron productos.</p>
           </div>
         )}
         {visibleCount < sortedProducts.length && (
