@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { MaterialIcon } from './MaterialIcon';
 import { Logo } from './Logo';
+import { generateGeneralWhatsAppLink } from '@/lib/whatsapp';
 
 export function Footer() {
   const [isLiked, setIsLiked] = useState(false);
@@ -100,8 +101,21 @@ export function Footer() {
           <h3 className="font-bold text-lg">Contacto Directo</h3>
           <ul className="text-sm space-y-4 text-muted-foreground">
             <li className="flex items-center gap-3">
-              <MaterialIcon icon="call" className="text-primary" /> +52 374 110
-              9133
+              <MaterialIcon icon="chat" className="text-primary" />
+              <a
+                href={generateGeneralWhatsAppLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                +52 374 110 9133
+              </a>
+            </li>
+            <li className="flex items-center gap-3">
+              <MaterialIcon icon="call" className="text-primary" />
+              <a href="tel:+523747422200" className="hover:underline">
+                +52 374 742 2200
+              </a>
             </li>
             <li className="flex items-center gap-3">
               <MaterialIcon icon="mail" className="text-primary" />
