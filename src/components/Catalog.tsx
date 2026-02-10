@@ -3,7 +3,6 @@
 import { useMemo, useState, useEffect } from 'react';
 import type { Product } from '@/lib/products';
 import { ProductCard } from './ProductCard';
-import { ProductDetailModal } from './ProductDetailModal';
 import {
   Select,
   SelectContent,
@@ -22,7 +21,6 @@ export function Catalog({ products }: { products: Product[] }) {
   const [visibleCount, setVisibleCount] = useState(PRODUCTS_PER_PAGE);
   const [sortBy, setSortBy] = useState('recent');
   const [selectedCategory, setSelectedCategory] = useState<Category>('Todos');
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredProducts = useMemo(() => {
@@ -80,14 +78,6 @@ export function Catalog({ products }: { products: Product[] }) {
     setVisibleCount((prevCount) => prevCount + PRODUCTS_PER_PAGE);
   };
 
-  const handleOpenModal = (product: Product) => {
-    setSelectedProduct(product);
-  };
-
-  const handleCloseModal = () => {
-    setSelectedProduct(null);
-  };
-
   const showingCount = Math.min(visibleCount, sortedProducts.length);
 
   return (
@@ -142,7 +132,6 @@ export function Catalog({ products }: { products: Product[] }) {
             <ProductCard
               key={product.code}
               product={product}
-              onOpenModal={() => handleOpenModal(product)}
             />
           ))}
         </div>
@@ -170,16 +159,6 @@ export function Catalog({ products }: { products: Product[] }) {
           </div>
         )}
       </section>
-
-      <ProductDetailModal
-        isOpen={!!selectedProduct}
-        onOpenChange={(isOpen) => {
-          if (!isOpen) {
-            handleCloseModal();
-          }
-        }}
-        product={selectedProduct}
-      />
     </>
   );
 }
