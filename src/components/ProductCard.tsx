@@ -27,7 +27,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
   return (
     <div
-      className="group flex flex-col bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-card hover:border-primary/20"
+      className="group flex flex-col h-full bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-card hover:border-primary/20"
     >
       <Link href={`/producto/${code}`} className="block">
         <div className="relative aspect-[4/5] overflow-hidden">
