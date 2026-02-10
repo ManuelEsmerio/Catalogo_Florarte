@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import type { Product } from '@/lib/products';
 import { Button } from './ui/button';
