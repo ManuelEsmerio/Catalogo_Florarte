@@ -14,6 +14,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { ProductCard } from '@/components/ProductCard';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 type Props = {
   params: { code: string };
@@ -36,11 +37,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 
 export default function ProductPage({ params }: Props) {
-  const product = products.find((p) => p.code === params.code);
+  const productIndex = products.findIndex((p) => p.code === params.code);
 
-  if (!product) {
+  if (productIndex === -1) {
     notFound();
   }
+
+  const product = products[productIndex];
+  const prevProduct = products[(productIndex - 1 + products.length) % products.length];
+  const nextProduct = products[(productIndex + 1) % products.length];
+
 
   const recommendedProducts = products
     .filter((p) => {
@@ -80,6 +86,24 @@ export default function ProductPage({ params }: Props) {
   return (
     <>
       <div className="max-w-6xl mx-auto my-12 px-4">
+        <div className="relative">
+          <Link
+            href={`/producto/${prevProduct.code}`}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 -translate-x-12 bg-card/80 backdrop-blur-sm p-2 rounded-full border shadow-lg hover:scale-110 transition-transform hidden lg:flex items-center justify-center"
+            aria-label="Anterior Producto"
+            scroll={false}
+          >
+            <ChevronLeft className="size-8 text-primary" />
+          </Link>
+          <Link
+            href={`/producto/${nextProduct.code}`}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 translate-x-12 bg-card/80 backdrop-blur-sm p-2 rounded-full border shadow-lg hover:scale-110 transition-transform hidden lg:flex items-center justify-center"
+            aria-label="Siguiente Producto"
+            scroll={false}
+          >
+            <ChevronRight className="size-8 text-primary" />
+          </Link>
+
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 bg-card p-4 sm:p-8 rounded-2xl shadow-lg border">
               <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
                   <Image
@@ -161,6 +185,7 @@ export default function ProductPage({ params }: Props) {
                   </div>
               </div>
           </div>
+        </div>
       </div>
       {recommendedProducts.length > 0 && (
         <section className="py-16 bg-background/50">
