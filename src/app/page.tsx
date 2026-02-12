@@ -22,11 +22,14 @@ export default function Home() {
   const [isPromotionModalOpen, setIsPromotionModalOpen] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsPromotionModalOpen(true);
-    }, 1500);
+    const hideModal = localStorage.getItem('hidePromotionModal');
+    if (hideModal !== 'true') {
+      const timer = setTimeout(() => {
+        setIsPromotionModalOpen(true);
+      }, 1500);
 
-    return () => clearTimeout(timer);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   const handleLoginSuccess = () => {

@@ -9,6 +9,9 @@ import {
 } from '@/components/ui/dialog';
 import Image from 'next/image';
 import { PlaceHolderImages, imageCacheVersion } from '@/lib/placeholder-images';
+import { useState } from 'react';
+import { Checkbox } from './ui/checkbox';
+import { Label } from './ui/label';
 
 interface PromotionModalProps {
   isOpen: boolean;
@@ -25,8 +28,17 @@ const findImage = (id: string) => {
 
 
 export function PromotionModal({ isOpen, onOpenChange }: PromotionModalProps) {
+  const [dontShowAgain, setDontShowAgain] = useState(false);
+
+  const handleOpenChange = (open: boolean) => {
+    if (!open && dontShowAgain) {
+      localStorage.setItem('hidePromotionModal', 'true');
+    }
+    onOpenChange(open);
+  };
+
   return (
-    <Dialog open={isOpen} onOpenChange={onOpenChange}>
+    <Dialog open={isOpen} onOpenChange={handleOpenChange}>
       <DialogContent className="sm:max-w-md p-0 gap-0 overflow-hidden rounded-2xl border-none bg-primary text-primary-foreground">
         <DialogHeader className="sr-only">
           <DialogTitle>Promoción especial de San Valentín</DialogTitle>
@@ -54,6 +66,18 @@ export function PromotionModal({ isOpen, onOpenChange }: PromotionModalProps) {
           
           <p className="text-xl font-medium">Arreglos del Catálogo</p>
           <p className="text-3xl font-bold tracking-wide">14 DE FEBRERO 2026</p>
+
+          <div className="pt-6 flex items-center space-x-2">
+            <Checkbox
+              id="dont-show-again"
+              checked={dontShowAgain}
+              onCheckedChange={(checked) => setDontShowAgain(!!checked)}
+              className="border-primary-foreground/80 data-[state=checked]:bg-primary-foreground data-[state=checked]:text-primary"
+            />
+            <Label htmlFor="dont-show-again" className="text-sm font-normal">
+              No volver a mostrar
+            </Label>
+          </div>
         </div>
       </DialogContent>
     </Dialog>
