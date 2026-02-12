@@ -26,7 +26,7 @@ const findImage = (id: string) => {
 export const products: Product[] = [
   {
     name: 'Pasión Eterna',
-    originalPrice: 1500,
+    originalPrice: 1250,
     price: 1350,
     description:
       '24 rosas rojas premium con envoltura elegante. Ideal para decir “te amo” sin palabras.',
@@ -41,7 +41,7 @@ export const products: Product[] = [
   },
   {
     name: 'Dulce Encanto',
-    originalPrice: 800,
+    originalPrice: 750,
     price: 720,
     description:
       '12 rosas rojas con detalles naturales. Perfecto para sorprender en cualquier ocasión.',
@@ -56,7 +56,7 @@ export const products: Product[] = [
   },
   {
     name: 'Elegancia Natural',
-    originalPrice: 940,
+    originalPrice: 890,
     price: 840,
     description:
       'Rosas y lilis en diseño vertical. Un detalle sofisticado y lleno de vida.',
@@ -71,7 +71,7 @@ export const products: Product[] = [
   },
   {
     name: 'Amor Total',
-    originalPrice: 1430,
+    originalPrice: 1550,
     price: 1280,
     description:
       'Ramo con globo, peluche y rosas. El paquete ideal para enamorar.',
@@ -116,7 +116,7 @@ export const products: Product[] = [
   },
   {
     name: 'Latido de Amor',
-    originalPrice: 370,
+    originalPrice: 400,
     price: 330,
     description:
       'Rosas en forma de corazón. Un detalle tierno para decir “te quiero”.',

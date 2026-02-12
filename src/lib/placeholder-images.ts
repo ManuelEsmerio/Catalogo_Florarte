@@ -10,7 +10,7 @@ const data = {
     {
       "id": "promo-modal-valentines",
       "description": "Promotional image for valentine's day showing a bouquet of roses and a discount",
-      "imageUrl": "/images/promo-modal-valentines.png",
+      "imageUrl": "/images/oferta.png",
       "imageHint": "valentines promotion"
     },
     {
