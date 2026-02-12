@@ -11,6 +11,7 @@ import { HowToOrder } from '@/components/HowToOrder';
 import { LoginModal } from '@/components/LoginModal';
 import { AdminModal } from '@/components/AdminModal';
 import { products as initialProducts, type Product } from '@/lib/products';
+import { Flower2 } from 'lucide-react';
 
 export default function Home() {
   const [products, setProducts] = useState<Product[]>(initialProducts);
@@ -45,6 +46,16 @@ export default function Home() {
           onLoginClick={() => setIsLoginModalOpen(true)}
           onAdminClick={() => setIsAdminModalOpen(true)}
         />
+        
+        <div className="px-4 pt-4 pb-2 bg-background">
+          <div className="relative bg-primary text-primary-foreground rounded-full py-3 px-6 text-center text-sm sm:text-base font-semibold shadow-lg max-w-3xl mx-auto flex items-center justify-center gap-3">
+            <Flower2 className="size-5 shrink-0" />
+            <span>
+              ¡Promoción Especial! 10% de descuento en todos nuestros arreglos con rosas
+            </span>
+          </div>
+        </div>
+
         <main>
           <Hero />
           <Catalog products={products} />
