@@ -27,7 +27,7 @@ export const products: Product[] = [
   {
     name: 'Pasión Eterna',
     originalPrice: 1250,
-    price: 1350,
+    price: 1120,
     description:
       '24 rosas rojas premium con envoltura elegante. Ideal para decir “te amo” sin palabras.',
     image: findImage('ramo-24-rosas'),
@@ -42,7 +42,7 @@ export const products: Product[] = [
   {
     name: 'Dulce Encanto',
     originalPrice: 750,
-    price: 720,
+    price: 670,
     description:
       '12 rosas rojas con detalles naturales. Perfecto para sorprender en cualquier ocasión.',
     image: findImage('ramo-12-rosas'),
@@ -57,7 +57,7 @@ export const products: Product[] = [
   {
     name: 'Elegancia Natural',
     originalPrice: 890,
-    price: 840,
+    price: 800,
     description:
       'Rosas y lilis en diseño vertical. Un detalle sofisticado y lleno de vida.',
     image: findImage('arreglo-espiral'),
@@ -72,7 +72,7 @@ export const products: Product[] = [
   {
     name: 'Amor Total',
     originalPrice: 1550,
-    price: 1280,
+    price: 1390,
     description:
       'Ramo con globo, peluche y rosas. El paquete ideal para enamorar.',
     image: findImage('paquete-ramo-24-globo-peluche'),
@@ -117,7 +117,7 @@ export const products: Product[] = [
   {
     name: 'Latido de Amor',
     originalPrice: 400,
-    price: 330,
+    price: 360,
     description:
       'Rosas en forma de corazón. Un detalle tierno para decir “te quiero”.',
     image: findImage('Arreglo-6-rosas'),
@@ -192,8 +192,8 @@ export const products: Product[] = [
   },
   {
     name: 'Rosas Imperiales',
-    originalPrice: 1040,
-    price: 930,
+    originalPrice: 1100,
+    price: 990,
     description:
       'Rosas y lirios en diseño escalonado. Impactante, elegante y sofisticado.',
     image: findImage('arreglo-capaz-rosas'),
@@ -252,8 +252,8 @@ export const products: Product[] = [
   },
   {
     name: 'Detalle Perfecto',
-    originalPrice: 190,
-    price: 170,
+    originalPrice: 200,
+    price: 180,
     description:
       'Dos rosas en florero con moño. Pequeño, elegante y significativo.',
     image: findImage('arreglo-florarte-3'),
@@ -267,8 +267,8 @@ export const products: Product[] = [
   },
   {
     name: 'Seis Promesas',
-    originalPrice: 420,
-    price: 370,
+    originalPrice: 450,
+    price: 400,
     description:
       'Seis rosas rojas en florero elegante. Un detalle romántico y significativo.',
     image: findImage('arreglo-florarte-4'),
@@ -342,8 +342,8 @@ export const products: Product[] = [
   },
   {
     name: 'Romance Total',
-    originalPrice: 1515,
-    price: 1360,
+    originalPrice: 1560,
+    price: 1400,
     description:
       'Ramo floral con peluche, globo y chocolates. Todo lo que necesita para enamorar.',
     image: findImage('amor-floral'),
