@@ -26,6 +26,11 @@ export function ProductCard({ product }: ProductCardProps) {
     isAvailable,
   } = product;
 
+  const discountPercentage =
+    originalPrice && originalPrice > price
+      ? Math.round(((originalPrice - price) / originalPrice) * 100)
+      : 0;
+
   return (
     <div
       className="group flex flex-col h-full bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-card hover:border-primary/20"
@@ -48,14 +53,20 @@ export function ProductCard({ product }: ProductCardProps) {
               </span>
             </div>
           )}
-          {!isAvailable && (
+          {!isAvailable ? (
             <div className="absolute top-4 right-4 z-10">
-              <span
-                className="text-xs font-bold uppercase px-3 py-1 rounded-full shadow-lg bg-destructive text-destructive-foreground"
-              >
+              <span className="text-xs font-bold uppercase px-3 py-1 rounded-full shadow-lg bg-destructive text-destructive-foreground">
                 Agotado
               </span>
             </div>
+          ) : (
+            discountPercentage > 0 && (
+              <div className="absolute top-4 right-4 z-10">
+                <span className="text-xs font-bold uppercase px-3 py-1 rounded-full shadow-lg bg-accent text-accent-foreground">
+                  -{discountPercentage}%
+                </span>
+              </div>
+            )
           )}
         </div>
       </Link>

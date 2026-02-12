@@ -84,6 +84,11 @@ export default function ProductPage({ params }: Props) {
     isAvailable,
   } = product;
 
+  const discountPercentage =
+    originalPrice && originalPrice > price
+      ? Math.round(((originalPrice - price) / originalPrice) * 100)
+      : 0;
+
   return (
     <>
       <div className="max-w-6xl mx-auto my-12 px-4">
@@ -123,14 +128,20 @@ export default function ProductPage({ params }: Props) {
                       </span>
                   </div>
                   )}
-                  {!isAvailable && (
-                  <div className="absolute top-4 right-4 z-10">
-                      <span
-                      className="text-xs font-bold uppercase px-3 py-1 rounded-full shadow-lg bg-destructive text-destructive-foreground"
-                      >
-                      Agotado
+                  {!isAvailable ? (
+                    <div className="absolute top-4 right-4 z-10">
+                      <span className="text-xs font-bold uppercase px-3 py-1 rounded-full shadow-lg bg-destructive text-destructive-foreground">
+                        Agotado
                       </span>
-                  </div>
+                    </div>
+                  ) : (
+                    discountPercentage > 0 && (
+                      <div className="absolute top-4 right-4 z-10">
+                        <span className="text-xs font-bold uppercase px-3 py-1 rounded-full shadow-lg bg-accent text-accent-foreground">
+                          -{discountPercentage}%
+                        </span>
+                      </div>
+                    )
                   )}
               </div>
               <div className="flex flex-col justify-center">
