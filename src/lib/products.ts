@@ -57,7 +57,7 @@ export const products: Product[] = [
   {
     name: 'Elegancia Natural',
     originalPrice: 940,
-    price: 846,
+    price: 840,
     description:
       'Rosas y lilis en diseño vertical. Un detalle sofisticado y lleno de vida.',
     image: findImage('arreglo-espiral'),
@@ -72,7 +72,7 @@ export const products: Product[] = [
   {
     name: 'Amor Total',
     originalPrice: 1430,
-    price: 1287,
+    price: 1280,
     description:
       'Ramo con globo, peluche y rosas. El paquete ideal para enamorar.',
     image: findImage('paquete-ramo-24-globo-peluche'),
@@ -114,21 +114,10 @@ export const products: Product[] = [
     category: 'flores',
     isAvailable: true,
   },
-  // {
-  //   name: 'Sonrisa Floral',
-  //   price: 920,
-  //   description:
-  //     'Un arreglo floral colorido y llamativo con rosas rojas, gerberas rosas, un girasol, lirios y alstroemerias, acompañado de follaje verde que le da volumen y frescura.',
-  //   image: findImage('arreglo-espiral-grande-colores'),
-  //   imageAlt: 'Arreglo espiral, floral de colores',
-  //   code: 'FE07',
-  //   category: 'flores',
-  //   isAvailable: true,
-  // },
   {
     name: 'Latido de Amor',
     originalPrice: 370,
-    price: 333,
+    price: 330,
     description:
       'Rosas en forma de corazón. Un detalle tierno para decir “te quiero”.',
     image: findImage('Arreglo-6-rosas'),
@@ -143,7 +132,7 @@ export const products: Product[] = [
   {
     name: 'Doble Elegancia',
     originalPrice: 1250,
-    price: 1125,
+    price: 1120,
     description:
       'Diseño vertical con rosas y lirios. Sofisticación en cada detalle.',
     image: findImage('arreglo-espiral-doble'),
@@ -189,7 +178,7 @@ export const products: Product[] = [
   {
     name: 'Alegría Natural',
     originalPrice: 650,
-    price: 585,
+    price: 580,
     description:
       'Gerberas y flores mixtas llenas de vida. Un detalle alegre y especial.',
     image: findImage('arreglo-surtido-9'),
@@ -204,7 +193,7 @@ export const products: Product[] = [
   {
     name: 'Rosas Imperiales',
     originalPrice: 1040,
-    price: 936,
+    price: 930,
     description:
       'Rosas y lirios en diseño escalonado. Impactante, elegante y sofisticado.',
     image: findImage('arreglo-capaz-rosas'),
@@ -216,17 +205,6 @@ export const products: Product[] = [
     category: 'flores',
     isAvailable: true,
   },
-  // {
-  //   name: 'Arreglo Surtido Colores',
-  //   price: 650,
-  //   description:
-  //     'Un arreglo floral elegante y vertical con rosas rojas, gerberas, lirios blancos y follaje tropical, estructurado con altura y contraste de colores para un efecto sofisticado.',
-  //   image: findImage('arreglo-surtido-colores'),
-  //   imageAlt: 'Arreglo Surtido Colores',
-  //   code: 'FE14',
-  //   category: 'flores',
-  //   isAvailable: true,
-  // },
   {
     name: 'Sueño Rosado',
     originalPrice: 2800,
@@ -245,7 +223,7 @@ export const products: Product[] = [
   {
     name: 'Encanto Clásico',
     originalPrice: 650,
-    price: 585,
+    price: 580,
     description:
       'Rosas rojas con lirios en base elegante. Un regalo fino y especial.',
     image: findImage('arreglo-florarte-1'),
@@ -275,7 +253,7 @@ export const products: Product[] = [
   {
     name: 'Detalle Perfecto',
     originalPrice: 190,
-    price: 171,
+    price: 170,
     description:
       'Dos rosas en florero con moño. Pequeño, elegante y significativo.',
     image: findImage('arreglo-florarte-3'),
@@ -290,7 +268,7 @@ export const products: Product[] = [
   {
     name: 'Seis Promesas',
     originalPrice: 420,
-    price: 378,
+    price: 370,
     description:
       'Seis rosas rojas en florero elegante. Un detalle romántico y significativo.',
     image: findImage('arreglo-florarte-4'),
@@ -302,17 +280,6 @@ export const products: Product[] = [
     category: 'flores',
     isAvailable: true,
   },
-  // {
-  //   name: 'Romance Natural',
-  //   price: 650,
-  //   description:
-  //     'Canasta con flores mixtas y rosas. Frescura, color y amor en un solo arreglo.',
-  //   image: findImage('arreglo-florarte-5'),
-  //   imageAlt: 'Romance Natural',
-  //   code: 'FE20',
-  //   category: 'flores',
-  //   isAvailable: true,
-  // },
   {
     name: 'Amor en Dos Tonos',
     originalPrice: 1400,
@@ -361,7 +328,7 @@ export const products: Product[] = [
   {
     name: 'Amor Radiante Deluxe',
     originalPrice: 2780,
-    price: 2502,
+    price: 2500,
     description:
       'Ramo de rosas y girasoles con globo “Love You”. Un regalo completo e inolvidable.',
     image: findImage('ramo-50-rosas-globo'),
@@ -376,7 +343,7 @@ export const products: Product[] = [
   {
     name: 'Romance Total',
     originalPrice: 1515,
-    price: 1364,
+    price: 1360,
     description:
       'Ramo floral con peluche, globo y chocolates. Todo lo que necesita para enamorar.',
     image: findImage('amor-floral'),
@@ -439,9 +406,6 @@ export const products: Product[] = [
       'Caja especial en forma de corazón con chocolates. Romance y sabor en un solo regalo.',
     image: findImage('ferrero-corazon-2pz'),
     imageAlt: 'Amor Dulce Deluxeo',
-    // badge: 'NUEVO',
-    // badgeColor: 'bg-green-500',
-    // badgeTextColor: 'text-white',
     code: 'CO05',
     category: 'complementos',
     isAvailable: true,
@@ -453,9 +417,6 @@ export const products: Product[] = [
       'Chocolate Ferrero individual. El complemento perfecto para cualquier ramo.',
     image: findImage('ferrero-corazon-5pz'),
     imageAlt: 'Detalle Dorado',
-    // badge: 'NUEVO',
-    // badgeColor: 'bg-green-500',
-    // badgeTextColor: 'text-white',
     code: 'CO06',
     category: 'complementos',
     isAvailable: true,
@@ -467,9 +428,6 @@ export const products: Product[] = [
       'Globo de helio con mensaje de San Valentín. El complemento perfecto para tu sorpresa.',
     image: findImage('globo-de-gas-2'),
     imageAlt: 'Globo Metalico Happy Valentines Day',
-    // badge: 'NUEVO',
-    // badgeColor: 'bg-green-500',
-    // badgeTextColor: 'text-white',
     code: 'CO07',
     category: 'complementos',
     isAvailable: true,
@@ -481,9 +439,6 @@ export const products: Product[] = [
       'Globo de helio en forma de corazón con mensaje “Love You”. Ideal para expresar tu amor.',
     image: findImage('globo-de-gas'),
     imageAlt: 'Globo Metalico Love You',
-    // badge: 'NUEVO',
-    // badgeColor: 'bg-green-500',
-    // badgeTextColor: 'text-white',
     code: 'CO08',
     category: 'complementos',
     isAvailable: true,
