@@ -15,30 +15,45 @@ interface PromotionModalProps {
   onOpenChange: (isOpen: boolean) => void;
 }
 
-export function PromotionModal({ isOpen, onOpenChange }: PromotionModalProps) {
-  const promoImage = PlaceHolderImages.find(
-    (img) => img.id === 'promo-modal-valentines'
-  );
+const findImage = (id: string) => {
+  const imageUrl = PlaceHolderImages.find((img) => img.id === id)?.imageUrl;
+  if (imageUrl) {
+    return `${imageUrl}?v=${imageCacheVersion}`;
+  }
+  return 'https://placehold.co/800x1000/f8f5f6/1c0d11?text=Imagen+no+disponible';
+};
 
+
+export function PromotionModal({ isOpen, onOpenChange }: PromotionModalProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-md p-0 bg-transparent border-none shadow-none">
+      <DialogContent className="sm:max-w-md p-0 gap-0 overflow-hidden rounded-2xl border-none bg-primary text-primary-foreground">
         <DialogHeader className="sr-only">
           <DialogTitle>Promoción especial de San Valentín</DialogTitle>
           <DialogDescription>
             Aprovecha el 10% de descuento en todos nuestros arreglos con rosas.
           </DialogDescription>
         </DialogHeader>
-        <div className="relative aspect-[3/4] w-full">
-          {promoImage && (
-            <Image
-              src={`${promoImage.imageUrl}?v=${imageCacheVersion}`}
-              alt={promoImage.description}
-              fill
-              className="object-cover rounded-xl"
-              data-ai-hint={promoImage.imageHint}
-            />
-          )}
+        <div className="text-primary-foreground p-10 text-center flex flex-col items-center justify-center space-y-2 relative">
+            <div className="absolute -bottom-12 -right-12 w-40 h-40 opacity-20 -rotate-12">
+                <Image
+                src={findImage('arreglo-florarte-7')}
+                alt="rosas en corazon"
+                width={160}
+                height={160}
+                className="object-contain"
+                />
+            </div>
+           <p className="text-lg font-medium tracking-wide">Envía tus regalos a distancia</p>
+          <div className="py-4">
+            <span className="text-8xl md:text-9xl font-extrabold tracking-tighter">10%</span>
+            <p className="text-2xl font-bold tracking-wider -mt-4">DE DESCUENTO</p>
+          </div>
+
+          <div className="w-3/4 border-t border-primary-foreground/30 py-2"></div>
+          
+          <p className="text-xl font-medium">Arreglos del Catálogo</p>
+          <p className="text-3xl font-bold tracking-wide">14 DE FEBRERO 2026</p>
         </div>
       </DialogContent>
     </Dialog>
