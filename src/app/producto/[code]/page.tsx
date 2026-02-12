@@ -73,6 +73,7 @@ export default function ProductPage({ params }: Props) {
   const {
     name,
     price,
+    originalPrice,
     description,
     image,
     imageAlt,
@@ -89,7 +90,7 @@ export default function ProductPage({ params }: Props) {
         <div className="relative">
           <Link
             href={`/producto/${prevProduct.code}`}
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-card/80 backdrop-blur-sm p-1 rounded-full border shadow-lg hover:scale-110 transition-transform flex items-center justify-center lg:p-2 lg:left-0 lg:-translate-x-12"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-card/80 backdrop-blur-sm p-1 rounded-full border shadow-lg hover:scale-110 transition-transform flex items-center justify-center lg:p-2 lg:-left-12"
             aria-label="Anterior Producto"
             scroll={false}
           >
@@ -97,7 +98,7 @@ export default function ProductPage({ params }: Props) {
           </Link>
           <Link
             href={`/producto/${nextProduct.code}`}
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-card/80 backdrop-blur-sm p-1 rounded-full border shadow-lg hover:scale-110 transition-transform flex items-center justify-center lg:p-2 lg:right-0 lg:translate-x-12"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-card/80 backdrop-blur-sm p-1 rounded-full border shadow-lg hover:scale-110 transition-transform flex items-center justify-center lg:p-2 lg:-right-12"
             aria-label="Siguiente Producto"
             scroll={false}
           >
@@ -146,13 +147,24 @@ export default function ProductPage({ params }: Props) {
                   </div>
                   <div className="flex flex-col gap-2">
                       <div className="text-right">
+                        {originalPrice && originalPrice > price ? (
+                          <>
+                            <p className="text-2xl font-bold text-muted-foreground line-through">
+                              ${originalPrice}
+                            </p>
+                            <p className="text-4xl font-bold text-primary leading-none -mt-1">
+                              ${price}
+                            </p>
+                          </>
+                        ) : (
                           <p className="text-4xl font-bold text-primary leading-none">
-                          ${price}
+                            ${price}
                           </p>
-                          <p className="text-xl font-bold text-primary leading-tight -mt-1">
+                        )}
+                        <p className="text-xl font-bold text-primary leading-tight -mt-1">
                           MXN
-                          </p>
-                          <p className="text-xs text-muted-foreground mt-1">+ ENVÍO</p>
+                        </p>
+                        <p className="text-xs text-muted-foreground mt-1">+ ENVÍO</p>
                       </div>
                       {isAvailable ? (
                           <a

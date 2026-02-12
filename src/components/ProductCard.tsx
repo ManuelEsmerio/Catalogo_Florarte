@@ -16,6 +16,7 @@ export function ProductCard({ product }: ProductCardProps) {
   const {
     name,
     price,
+    originalPrice,
     image,
     imageAlt,
     badge,
@@ -67,9 +68,20 @@ export function ProductCard({ product }: ProductCardProps) {
             <p className="text-xs text-muted-foreground mt-1">CÓD: {code}</p>
           </div>
           <div className="text-right flex-shrink-0">
-            <p className="text-primary font-bold text-lg whitespace-nowrap">
-              ${price}
-            </p>
+            {originalPrice && originalPrice > price ? (
+              <>
+                <p className="text-sm text-muted-foreground line-through">
+                  ${originalPrice}
+                </p>
+                <p className="text-primary font-bold text-lg whitespace-nowrap -mt-1">
+                  ${price}
+                </p>
+              </>
+            ) : (
+              <p className="text-primary font-bold text-lg whitespace-nowrap">
+                ${price}
+              </p>
+            )}
             <p className="text-xs text-muted-foreground -mt-1">+ ENVÍO</p>
           </div>
         </div>

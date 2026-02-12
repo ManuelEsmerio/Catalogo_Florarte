@@ -3,6 +3,7 @@ import { PlaceHolderImages, imageCacheVersion } from './placeholder-images';
 export interface Product {
   name: string;
   price: number;
+  originalPrice?: number;
   description: string;
   image: string;
   imageAlt: string;
