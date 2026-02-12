@@ -12,7 +12,7 @@ import { LoginModal } from '@/components/LoginModal';
 import { AdminModal } from '@/components/AdminModal';
 import { PromotionModal } from '@/components/PromotionModal';
 import { products as initialProducts, type Product } from '@/lib/products';
-import { Flower2 } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 export default function Home() {
   const [products, setProducts] = useState<Product[]>(initialProducts);
@@ -62,11 +62,12 @@ export default function Home() {
         />
         
         <div className="px-4 pt-4 pb-2 bg-background">
-          <div className="relative bg-primary text-primary-foreground rounded-full py-3 px-6 text-center text-sm sm:text-base font-semibold shadow-lg max-w-3xl mx-auto flex items-center justify-center gap-3">
-            <Flower2 className="size-5 shrink-0" />
-            <span>
-              ¡Promoción Especial! 10% de descuento en todos nuestros arreglos con rosas
+          <div className="relative bg-primary text-primary-foreground rounded-full py-3 px-6 text-center text-sm sm:text-base font-bold shadow-lg w-fit mx-auto flex items-center justify-center gap-3">
+            <Sparkles className="size-5 shrink-0 animate-pulse" />
+            <span className="tracking-wide uppercase">
+              Oferta Especial: 10% OFF en Arreglos con Rosas
             </span>
+            <Sparkles className="size-5 shrink-0 animate-pulse" />
           </div>
         </div>
 
