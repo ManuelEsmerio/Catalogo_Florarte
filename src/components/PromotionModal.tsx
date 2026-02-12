@@ -1,6 +1,12 @@
 'use client';
 
-import { Dialog, DialogContent } from '@/components/ui/dialog';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from '@/components/ui/dialog';
 import Image from 'next/image';
 import { PlaceHolderImages, imageCacheVersion } from '@/lib/placeholder-images';
 
@@ -17,6 +23,12 @@ export function PromotionModal({ isOpen, onOpenChange }: PromotionModalProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md p-0 bg-transparent border-none shadow-none">
+        <DialogHeader className="sr-only">
+          <DialogTitle>Promoción especial de San Valentín</DialogTitle>
+          <DialogDescription>
+            Aprovecha el 10% de descuento en todos nuestros arreglos con rosas.
+          </DialogDescription>
+        </DialogHeader>
         <div className="relative aspect-[3/4] w-full">
           {promoImage && (
             <Image
