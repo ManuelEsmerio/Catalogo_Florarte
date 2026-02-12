@@ -27,7 +27,7 @@ export const products: Product[] = [
   {
     name: 'Pasión Eterna',
     originalPrice: 1500,
-    price: 1130,
+    price: 1350,
     description:
       '24 rosas rojas premium con envoltura elegante. Ideal para decir “te amo” sin palabras.',
     image: findImage('ramo-24-rosas'),
@@ -42,7 +42,7 @@ export const products: Product[] = [
   {
     name: 'Dulce Encanto',
     originalPrice: 800,
-    price: 690,
+    price: 720,
     description:
       '12 rosas rojas con detalles naturales. Perfecto para sorprender en cualquier ocasión.',
     image: findImage('ramo-12-rosas'),
@@ -57,7 +57,7 @@ export const products: Product[] = [
   {
     name: 'Elegancia Natural',
     originalPrice: 940,
-    price: 855,
+    price: 846,
     description:
       'Rosas y lilis en diseño vertical. Un detalle sofisticado y lleno de vida.',
     image: findImage('arreglo-espiral'),
@@ -86,7 +86,7 @@ export const products: Product[] = [
   {
     name: 'Amor Radiante',
     originalPrice: 2700,
-    price: 2450,
+    price: 2430,
     description:
       '50 rosas rojas con girasoles vibrantes. Un detalle lleno de amor y alegría.',
     image: findImage('ramo-50-rosas-girasoles'),
@@ -101,7 +101,7 @@ export const products: Product[] = [
   {
     name: 'Clásico Perfecto',
     originalPrice: 1400,
-    price: 1280,
+    price: 1260,
     description:
       '24 rosas en florero de cristal. Elegancia que enamora en cualquier momento.',
     image: findImage('florero-24-rosas'),
@@ -142,7 +142,7 @@ export const products: Product[] = [
   {
     name: 'Doble Elegancia',
     originalPrice: 1250,
-    price: 1160,
+    price: 1125,
     description:
       'Diseño vertical con rosas y lirios. Sofisticación en cada detalle.',
     image: findImage('arreglo-espiral-doble'),
@@ -172,7 +172,7 @@ export const products: Product[] = [
   {
     name: 'Armonía Floral',
     originalPrice: 1800,
-    price: 1690,
+    price: 1620,
     description:
       'Combinación de flores frescas y colores vibrantes. Perfecto para cualquier ocasión.',
     image: findImage('arreglo-surtido'),
@@ -224,7 +224,7 @@ export const products: Product[] = [
   {
     name: 'Sueño Rosado',
     originalPrice: 2800,
-    price: 2550,
+    price: 2520,
     description:
       'Rosas en tonos suaves con detalles delicados. Perfecto para un detalle romántico.',
     image: findImage('ramo-surtido-rosas'),
@@ -239,7 +239,7 @@ export const products: Product[] = [
   {
     name: 'Encanto Clásico',
     originalPrice: 650,
-    price: 600,
+    price: 585,
     description:
       'Rosas rojas con lirios en base elegante. Un regalo fino y especial.',
     image: findImage('arreglo-florarte-1'),
@@ -254,7 +254,7 @@ export const products: Product[] = [
   {
     name: 'Diez Razones para Amarte',
     originalPrice: 900,
-    price: 850,
+    price: 810,
     description:
       '10 rosas rojas con follaje natural. Amor puro en cada flor.',
     image: findImage('arreglo-florarte-2'),
@@ -302,7 +302,7 @@ export const products: Product[] = [
   {
     name: 'Amor en Dos Tonos',
     originalPrice: 1400,
-    price: 1280,
+    price: 1260,
     description:
       'Rosas rojas y rosadas en florero. Perfecto para expresar amor y ternura.',
     image: findImage('arreglo-florarte-6'),
@@ -317,7 +317,7 @@ export const products: Product[] = [
   {
     name: 'Tentación de Amor',
     originalPrice: 2700,
-    price: 2450,
+    price: 2430,
     description:
       'Caja en forma de corazón con rosas y chocolates. El regalo más dulce y romántico.',
     image: findImage('arreglo-florarte-7'),
@@ -332,7 +332,7 @@ export const products: Product[] = [
   {
     name: 'Amor en Armonía',
     originalPrice: 4700,
-    price: 4200,
+    price: 4230,
     description:
       '100 rosas rojas y rosadas en elegante envoltura. Romance y delicadeza en un solo ramo.',
     image: findImage('arreglo-florarte-8'),
@@ -347,7 +347,7 @@ export const products: Product[] = [
   {
     name: 'Amor Radiante Deluxe',
     originalPrice: 2780,
-    price: 2530,
+    price: 2502,
     description:
       'Ramo de rosas y girasoles con globo “Love You”. Un regalo completo e inolvidable.',
     image: findImage('ramo-50-rosas-globo'),
