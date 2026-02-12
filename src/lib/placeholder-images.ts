@@ -1,11 +1,17 @@
 const data = {
-  "version": 3,
+  "version": 4,
   "placeholderImages": [
     {
       "id": "hero-valentines",
       "description": "Beautiful bouquet of red roses and pink lilies for Valentine's Day",
       "imageUrl": "/images/hero-valentines.png",
       "imageHint": "red roses"
+    },
+    {
+      "id": "promo-modal-valentines",
+      "description": "Promotional image for valentine's day showing a bouquet of roses and a discount",
+      "imageUrl": "/images/promo-modal-valentines.png",
+      "imageHint": "valentines promotion"
     },
     {
       "id": "ramo-24-rosas",

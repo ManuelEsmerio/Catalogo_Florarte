@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Catalog } from '@/components/Catalog';
 import { CtaSection } from '@/components/CtaSection';
 import { FloatingWhatsAppButton } from '@/components/FloatingWhatsAppButton';
@@ -10,6 +10,7 @@ import { Hero } from '@/components/Hero';
 import { HowToOrder } from '@/components/HowToOrder';
 import { LoginModal } from '@/components/LoginModal';
 import { AdminModal } from '@/components/AdminModal';
+import { PromotionModal } from '@/components/PromotionModal';
 import { products as initialProducts, type Product } from '@/lib/products';
 import { Flower2 } from 'lucide-react';
 
@@ -18,6 +19,15 @@ export default function Home() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isAdminModalOpen, setIsAdminModalOpen] = useState(false);
+  const [isPromotionModalOpen, setIsPromotionModalOpen] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsPromotionModalOpen(true);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleLoginSuccess = () => {
     setIsAuthenticated(true);
@@ -39,6 +49,10 @@ export default function Home() {
 
   return (
     <>
+      <PromotionModal 
+        isOpen={isPromotionModalOpen}
+        onOpenChange={setIsPromotionModalOpen}
+      />
       <div className="relative flex min-h-screen flex-col overflow-x-hidden">
         <FloatingWhatsAppButton />
         <Header
