@@ -177,16 +177,16 @@ export const products: Product[] = [
 
   {
     name: 'Alegría Natural',
-    originalPrice: 650,
-    price: 580,
+    // originalPrice: 650,
+    price: 650,
     description:
       'Gerberas y flores mixtas llenas de vida. Un detalle alegre y especial.',
     image: findImage('arreglo-surtido-9'),
     imageAlt: 'Alegría Natural',
     code: 'FE12',
-    badge: 'OFERTA',
-    badgeColor: 'bg-primary',
-    badgeTextColor: 'text-primary-foreground',
+    // badge: 'OFERTA',
+    // badgeColor: 'bg-primary',
+    // badgeTextColor: 'text-primary-foreground',
     category: 'flores',
     isAvailable: true,
   },
