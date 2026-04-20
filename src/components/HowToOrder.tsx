@@ -1,24 +1,24 @@
-import { MaterialIcon } from './MaterialIcon';
+import { MaterialIcon } from "./MaterialIcon";
 
 export function HowToOrder() {
   const steps = [
     {
-      icon: 'grid_view',
-      title: '1. Elige con el Corazón',
+      icon: "grid_view",
+      title: "1. Elige tus favoritos",
       description:
-        'Explora nuestra colección diseñada exclusivamente para celebrar el amor en todas sus formas.',
+        "Explora el catalogo y revisa los detalles de cada arreglo para elegir los que mas te gusten.",
     },
     {
-      icon: 'touch_app',
-      title: '2. Conecta con Nosotros',
+      icon: "shopping_cart",
+      title: "2. Agrega al carrito",
       description:
-        'Haz clic en el botón de WhatsApp. Te atenderemos personalmente para asegurar cada detalle.',
+        "Agrega todos los productos que quieras al carrito, ajusta cantidades y elimina los que no necesites.",
     },
     {
-      icon: 'forum',
-      title: '3. Entrega de Felicidad',
+      icon: "chat",
+      title: "3. Confirma por WhatsApp",
       description:
-        'Confirmamos la dirección y horario. Nosotros nos encargamos de que la sorpresa sea perfecta.',
+        "Pulsa Continuar y te abrimos WhatsApp con tu pedido listo para confirmar entrega y horario.",
     },
   ];
 
@@ -30,10 +30,10 @@ export function HowToOrder() {
       <div className="max-w-[1200px] mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight">
-            Crea tu momento especial en 3 pasos
+            Crea tu pedido en 3 pasos
           </h2>
           <p className="text-muted-foreground mt-3 text-lg">
-            Hacemos que sorprender sea más fácil que nunca
+            Hacemos que pedir sea rapido, claro y sin complicaciones
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

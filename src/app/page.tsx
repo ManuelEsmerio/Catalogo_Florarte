@@ -1,18 +1,18 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { Catalog } from '@/components/Catalog';
-import { CtaSection } from '@/components/CtaSection';
-import { FloatingWhatsAppButton } from '@/components/FloatingWhatsAppButton';
-import { Footer } from '@/components/Footer';
-import { Header } from '@/components/Header';
-import { Hero } from '@/components/Hero';
-import { HowToOrder } from '@/components/HowToOrder';
-import { LoginModal } from '@/components/LoginModal';
-import { AdminModal } from '@/components/AdminModal';
-import { PromotionModal } from '@/components/PromotionModal';
-import { products as initialProducts, type Product } from '@/lib/products';
-import { Sparkles } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Catalog } from "@/components/Catalog";
+import { CtaSection } from "@/components/CtaSection";
+import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import { Hero } from "@/components/Hero";
+import { HowToOrder } from "@/components/HowToOrder";
+import { LoginModal } from "@/components/LoginModal";
+import { AdminModal } from "@/components/AdminModal";
+import { PromotionModal } from "@/components/PromotionModal";
+import { products as initialProducts, type Product } from "@/lib/products";
+import { Sparkles } from "lucide-react";
 
 export default function Home() {
   const [products, setProducts] = useState<Product[]>(initialProducts);
@@ -22,8 +22,8 @@ export default function Home() {
   const [isPromotionModalOpen, setIsPromotionModalOpen] = useState(false);
 
   useEffect(() => {
-    const hideModal = localStorage.getItem('hidePromotionModal');
-    if (hideModal !== 'true') {
+    const hideModal = localStorage.getItem("hidePromotionModal");
+    if (hideModal !== "true") {
       const timer = setTimeout(() => {
         setIsPromotionModalOpen(true);
       }, 1500);
@@ -39,20 +39,20 @@ export default function Home() {
   const handleToggleProduct = (productCode: string, isAvailable: boolean) => {
     setProducts((prevProducts) =>
       prevProducts.map((p) =>
-        p.code === productCode ? { ...p, isAvailable } : p
-      )
+        p.code === productCode ? { ...p, isAvailable } : p,
+      ),
     );
   };
 
   const handleToggleAllProducts = (isAvailable: boolean) => {
     setProducts((prevProducts) =>
-      prevProducts.map((p) => ({ ...p, isAvailable }))
+      prevProducts.map((p) => ({ ...p, isAvailable })),
     );
   };
 
   return (
     <>
-      <PromotionModal 
+      <PromotionModal
         isOpen={isPromotionModalOpen}
         onOpenChange={setIsPromotionModalOpen}
       />
@@ -63,9 +63,9 @@ export default function Home() {
           onLoginClick={() => setIsLoginModalOpen(true)}
           onAdminClick={() => setIsAdminModalOpen(true)}
         />
-        
-        <div className="px-4 pt-4 pb-2 bg-background">
-          <div className="relative bg-primary text-primary-foreground rounded-full py-3 px-6 text-center text-sm sm:text-base font-bold shadow-lg w-fit mx-auto flex items-center justify-center gap-3">
+
+        <div className="bg-background px-4 pb-2 pt-4">
+          <div className="relative mx-auto flex w-fit items-center justify-center gap-3 rounded-full bg-primary px-6 py-3 text-center text-sm font-bold text-primary-foreground shadow-lg sm:text-base">
             <Sparkles className="size-5 shrink-0 animate-pulse" />
             <span className="tracking-wide uppercase">
               Oferta Especial: 10% OFF en Arreglos con Rosas

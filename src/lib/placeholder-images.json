@@ -2,16 +2,16 @@
   "version": 4,
   "placeholderImages": [
     {
-      "id": "hero-valentines",
-      "description": "Beautiful bouquet of red roses and pink lilies for Valentine's Day",
-      "imageUrl": "/images/hero-valentines.png",
+      "id": "hero-mayo",
+      "description": "Beautiful bouquet to celebrate Mother's Day",
+      "imageUrl": "/images/hero-mayo.png",
       "imageHint": "red roses"
     },
     {
-      "id": "promo-modal-valentines",
-      "description": "Promotional image for valentine's day showing a bouquet of roses and a discount",
+      "id": "promo-modal-10-mayo",
+      "description": "Promotional image for Mother's Day showing a bouquet of roses and a discount",
       "imageUrl": "/images/oferta.png",
-      "imageHint": "valentines promotion"
+      "imageHint": "mothers day promotion"
     },
     {
       "id": "ramo-24-rosas",
@@ -99,9 +99,9 @@
     },
     {
       "id": "globo-de-gas-2",
-      "description": "Globo de helio de San Valentine.",
+      "description": "Globo de helio para Dia de las Madres.",
       "imageUrl": "/images/Globo-de-gas-2.png",
-      "imageHint": "globo de gas san valentine"
+      "imageHint": "globo de gas dia de las madres"
     },
     {
       "id": "ramo-50-rosas-girasoles",
