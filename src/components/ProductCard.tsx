@@ -1,12 +1,13 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import type { Product } from '@/lib/products';
-import { Button } from './ui/button';
-import { generateProductWhatsAppLink } from '@/lib/whatsapp';
-import { MaterialIcon } from './MaterialIcon';
-import { cn } from '@/lib/utils';
-import Link from 'next/link';
+import Image from "next/image";
+import type { Product } from "@/lib/products";
+import { Button } from "./ui/button";
+import { generateProductWhatsAppLink } from "@/lib/whatsapp";
+import { MaterialIcon } from "./MaterialIcon";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { AddToCartIconButton } from "./AddToCartIconButton";
 
 type ProductCardProps = {
   product: Product;
@@ -32,9 +33,7 @@ export function ProductCard({ product }: ProductCardProps) {
       : 0;
 
   return (
-    <div
-      className="group flex flex-col h-full bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-card hover:border-primary/20"
-    >
+    <div className="group flex flex-col h-full bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-card hover:border-primary/20">
       <Link href={`/producto/${code}`} className="block">
         <div className="relative aspect-[4/5] overflow-hidden">
           <Image
@@ -74,7 +73,9 @@ export function ProductCard({ product }: ProductCardProps) {
         <div className="flex justify-between items-start gap-4 flex-1">
           <div>
             <h3 className="text-lg font-bold text-foreground leading-tight">
-              <Link href={`/producto/${code}`} className="hover:underline">{name}</Link>
+              <Link href={`/producto/${code}`} className="hover:underline">
+                {name}
+              </Link>
             </h3>
             <p className="text-xs text-muted-foreground mt-1">CÓD: {code}</p>
           </div>
@@ -96,42 +97,45 @@ export function ProductCard({ product }: ProductCardProps) {
             <p className="text-xs text-muted-foreground -mt-1">+ ENVÍO</p>
           </div>
         </div>
-        <div className="flex items-center gap-2 mt-4">
+        <div className="mt-4 flex items-center gap-2">
           <Button
             variant="outline"
-            className="w-full font-bold border-primary/20 text-primary hover:bg-primary/5 hover:text-primary"
+            className="flex-1 font-bold border-primary/20 text-primary hover:bg-primary/5 hover:text-primary"
             asChild
           >
-            <Link href={`/producto/${code}`}>
-              Ver detalles
-            </Link>
+            <Link href={`/producto/${code}`}>Ver detalles</Link>
           </Button>
-          <a
-            href={
-              isAvailable ? generateProductWhatsAppLink(name, price, code) : undefined
-            }
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => {
-              if (!isAvailable) {
-                e.preventDefault();
-              }
-              e.stopPropagation();
-            }}
-            className={cn(
-              'flex-shrink-0 rounded-full p-3 transition-all shadow-sm hover:shadow-md active:scale-95',
-              isAvailable
-                ? 'bg-[#25D366]/20 hover:bg-[#25D366]/30 text-green-700'
-                : 'bg-muted text-muted-foreground cursor-not-allowed opacity-70'
-            )}
-            aria-label={
-              isAvailable ? 'Pedir por WhatsApp' : 'Producto agotado'
-            }
-            aria-disabled={!isAvailable}
-          >
-            <MaterialIcon icon="chat_bubble" className="text-xl" />
-          </a>
+          <AddToCartIconButton
+            product={product}
+            className="h-10 w-10 rounded-full"
+          />
         </div>
+        <a
+          href={
+            isAvailable
+              ? generateProductWhatsAppLink(name, price, code)
+              : undefined
+          }
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => {
+            if (!isAvailable) {
+              e.preventDefault();
+            }
+            e.stopPropagation();
+          }}
+          className={cn(
+            "mt-2 inline-flex w-full items-center justify-center gap-2 rounded-lg p-2 text-xs font-medium transition-all shadow-sm hover:shadow-md active:scale-95",
+            isAvailable
+              ? "bg-[#25D366]/20 hover:bg-[#25D366]/30 text-green-700"
+              : "bg-muted text-muted-foreground cursor-not-allowed opacity-70",
+          )}
+          aria-label={isAvailable ? "Pedir por WhatsApp" : "Producto agotado"}
+          aria-disabled={!isAvailable}
+        >
+          <MaterialIcon icon="chat_bubble" className="text-base" />
+          Pedir por WhatsApp
+        </a>
         <p className="text-[10px] text-muted-foreground mt-2 text-center">
           El diseño, colores y presentación de los arreglos florales, globos,
           peluches y demás complementos pueden variar según disponibilidad,
