@@ -21,16 +21,16 @@ export default function Home() {
   const [isAdminModalOpen, setIsAdminModalOpen] = useState(false);
   const [isPromotionModalOpen, setIsPromotionModalOpen] = useState(false);
 
-  useEffect(() => {
-    const hideModal = localStorage.getItem("hidePromotionModal");
-    if (hideModal !== "true") {
-      const timer = setTimeout(() => {
-        setIsPromotionModalOpen(true);
-      }, 1500);
+  // useEffect(() => {
+  //   const hideModal = localStorage.getItem("hidePromotionModal");
+  //   if (hideModal !== "true") {
+  //     const timer = setTimeout(() => {
+  //       setIsPromotionModalOpen(true);
+  //     }, 1500);
 
-      return () => clearTimeout(timer);
-    }
-  }, []);
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, []);
 
   const handleLoginSuccess = () => {
     setIsAuthenticated(true);
@@ -64,7 +64,7 @@ export default function Home() {
           onAdminClick={() => setIsAdminModalOpen(true)}
         />
 
-        <div className="bg-background px-4 pb-2 pt-4">
+        {/*<div className="bg-background px-4 pb-2 pt-4">
           <div className="relative mx-auto flex w-fit items-center justify-center gap-3 rounded-full bg-primary px-6 py-3 text-center text-sm font-bold text-primary-foreground shadow-lg sm:text-base">
             <Sparkles className="size-5 shrink-0 animate-pulse" />
             <span className="tracking-wide uppercase">
@@ -72,7 +72,7 @@ export default function Home() {
             </span>
             <Sparkles className="size-5 shrink-0 animate-pulse" />
           </div>
-        </div>
+        </div> */}
 
         <main>
           <Hero />

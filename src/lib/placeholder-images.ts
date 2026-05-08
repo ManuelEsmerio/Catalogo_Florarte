@@ -225,6 +225,60 @@ const data = {
       imageUrl: "/images/ferrero-corazon-5pz.png",
       imageHint: "Chocolate Ferrero 5pz.",
     },
+    {
+      id: "Arreglo-2-rosas-florero",
+      description: "Elegante florero con dos rosas rojas y finos detalles florales.",
+      imageUrl: "/images/10deMayo/Arreglo-2-rosas-florero.jpeg",
+      imageHint: "Florero con dos rosas rojas y follaje decorativo.",
+    },
+    {
+      id: "Arreglo-jardin-encantado",
+      description: "Arreglo premium con lilies rosas y flores variadas en tonos pastel.",
+      imageUrl: "/images/10deMayo/Arreglo-jardin-encantado.jpeg",
+      imageHint: "Arreglo floral premium con lilies rosas y flores de temporada.",
+    },
+    {
+      id: "Arreglo-sol-primavera",
+      description: "Arreglo triangular con girasoles, rosas rojas y lilies blancas.",
+      imageUrl: "/images/10deMayo/Arreglo-sol-primavera.jpeg",
+      imageHint: "Arreglo grande de girasoles y rosas rojas.",
+    },
+    {
+      id: "Bouquet-girasoles-negro",
+      description: "Bouquet moderno de girasoles con elegante envoltura negra.",
+      imageUrl: "/images/10deMayo/Bouquet-girasoles-negro.jpeg",
+      imageHint: "Bouquet elegante de girasoles con papel negro.",
+    },
+    {
+      id: "Bouquet-pasion-floral",
+      description: "Ramo sofisticado con lilies rosas, gerberas y rosas rojas.",
+      imageUrl: "/images/10deMayo/Bouquet-pasion-floral.jpeg",
+      imageHint: "Bouquet con lilies rosas y rosas rojas.",
+    },
+    {
+      id: "Bouquet-dulce-amanecer",
+      description: "Bouquet romántico con rosas rosas y girasoles decorativos.",
+      imageUrl: "/images/10deMayo/Bouquet-dulce-amanecer.jpeg",
+      imageHint: "Bouquet rosa con girasoles y flores decorativas.",
+    },
+    {
+      id: "Corazon-girasoles-rosas",
+      description: "Arreglo circular con rosas rojas, girasoles y mariposas decorativas.",
+      imageUrl: "/images/10deMayo/Corazon-girasoles-rosas.jpeg",
+      imageHint: "Arreglo premium con girasoles y rosas rojas.",
+    },
+    {
+      id: "Bouquet-rosas-eternas",
+      description: "Bouquet clásico de rosas rojas con envoltura elegante moderna.",
+      imageUrl: "/images/10deMayo/Bouquet-rosas-eternas.jpeg",
+      imageHint: "Bouquet clásico de rosas rojas.",
+    },
+    {
+      id: "Bouquet-noche-girasoles",
+      description: "Bouquet elegante con girasoles y lilies blancas.",
+      imageUrl: "/images/10deMayo/Bouquet-noche-girasoles.jpeg",
+      imageHint: "Bouquet moderno con girasoles y lilies.",
+    },
   ],
 };
 
