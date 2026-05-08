@@ -21,16 +21,16 @@ export default function Home() {
   const [isAdminModalOpen, setIsAdminModalOpen] = useState(false);
   const [isPromotionModalOpen, setIsPromotionModalOpen] = useState(false);
 
-  useEffect(() => {
-    const hideModal = localStorage.getItem("hidePromotionModal");
-    if (hideModal !== "true") {
-      const timer = setTimeout(() => {
-        setIsPromotionModalOpen(true);
-      }, 1500);
+  // useEffect(() => {
+  //   const hideModal = localStorage.getItem("hidePromotionModal");
+  //   if (hideModal !== "true") {
+  //     const timer = setTimeout(() => {
+  //       setIsPromotionModalOpen(true);
+  //     }, 1500);
 
-      return () => clearTimeout(timer);
-    }
-  }, []);
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, []);
 
   const handleLoginSuccess = () => {
     setIsAuthenticated(true);
